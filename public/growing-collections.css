@@ -1,0 +1,98 @@
+/* Scalable memory galaxy: bounded nodes and filters, blue/cream/gold. */
+#memoryFireflies::backdrop{background:#173a4eab;backdrop-filter:blur(2px)}
+#memoryFireflies .firefly-world{background:radial-gradient(ellipse at 50% 28%,#aacddd35,transparent 75%);grid-template-rows:auto auto minmax(150px,23vh) auto auto auto auto}
+#memoryFireflies .memory-filters{display:flex;align-items:end;justify-content:center;gap:12px;flex-wrap:wrap;font-size:12px}
+.memory-filters label{display:grid;gap:4px;color:#efe5ca}
+#memoryFireflies .memory-filters select{border:1px solid #d1c398;background:#f6f0df;color:#4e6e7e;border-radius:6px;padding:8px;max-width:220px;font:inherit}
+#memoryFireflies.is-album .firefly-arc{height:26vh;min-height:200px;max-height:320px;overflow:auto;scrollbar-width:thin;scrollbar-color:#d9cda6 transparent}
+#memoryFireflies .memory-years{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:13px;padding:8px}
+#memoryFireflies .memory-years button{display:grid;justify-items:center;gap:8px;background:linear-gradient(145deg,#eaf3f1eb,#fbf1d8ed);color:#536f7a;border:1px solid #dbcba0;min-height:107px;padding:15px}
+.memory-years b{font:24px Georgia,serif}.memory-years small{color:#9a8357;font-size:11px}
+.year-orbit{display:block;width:35px;height:16px;border:1px solid #bfaa6f88;border-radius:50%;rotate:-20deg;position:relative}
+.year-orbit:after{content:'';position:absolute;width:5px;height:5px;background:#e6c66d;border-radius:50%;left:6px;top:0;box-shadow:0 0 6px #ebd89d}
+.galaxy-album{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 14px;padding:4px 8px}
+.galaxy-album h3{grid-column:1/-1;font:17px KaiTi,STKaiti,serif;font-weight:500;margin:5px 0;color:#e7d9b3}
+#memoryFireflies .album-memory{display:grid;grid-template-columns:10px 1fr auto;gap:5px 10px;align-items:center;text-align:left;background:#eef4eced;color:#466a77;border:1px solid #c1cfc6;border-radius:8px;padding:11px 12px;min-width:0}
+.album-memory time{font:11px Georgia,serif;color:#8c846b}.album-memory b{grid-column:2;white-space:nowrap;overflow:hidden;text-overflow:ellipsis;font-size:13px;font-weight:500}.album-memory>span{grid-column:3;grid-row:1/3;font-size:10px;color:#9a895f}.album-memory i{grid-row:1/3;width:5px;height:7px;border-radius:50%;background:#e6c16b;box-shadow:0 0 5px #f2d78e}
+#memoryFireflies .album-memory.selected{border-color:#dfc077;background:#fff4d8}
+.memory-node-nav{display:flex;align-items:center;justify-content:center;gap:15px;font-size:11px;color:#d2e6e9}
+#memoryFireflies .memory-node-nav button{padding:6px 10px;font-size:12px}
+#memoryFireflies.is-editing .firefly-arc{display:none}
+#memoryFireflies.is-editing{grid-template-rows:auto auto auto auto auto}
+#home .memory-jar-count{position:absolute;top:100%;left:50%;translate:-50% 3px;white-space:nowrap;font-size:10px;color:#566847;text-shadow:0 1px 3px #fff8df;pointer-events:none}
+#home .actor-slot.slow .memory-jar-lights i.arrival-firefly{left:45%;top:40%;animation:none}
+@media(max-width:650px){#memoryFireflies .firefly-world{grid-template-rows:auto auto 175px auto auto auto auto;padding-top:66px}#memoryFireflies.is-album .firefly-arc{height:210px;min-height:0}.galaxy-album{gap:6px;padding:2px}.memory-years{gap:8px!important;grid-template-columns:repeat(2,minmax(0,1fr))!important}#memoryFireflies .memory-years button{padding:10px;min-height:90px}.galaxy-album{grid-template-columns:1fr}#memoryFireflies .album-memory{padding:9px 10px}.memory-node-nav{gap:8px}.memory-node-nav>span{font-size:10px}#memoryFireflies.is-editing .firefly-arc{display:none}#memoryFireflies.is-editing{grid-template-rows:auto auto auto auto auto}.memory-filters{gap:7px!important}.memory-filters select{max-width:150px!important}}
+/* True wish lights: visible slots are real IDs, never statistics. */
+#home #treeCount{display:none!important}
+#home #wishTree{pointer-events:auto!important;cursor:pointer;min-height:110px;width:100%;height:130px;position:relative;padding:0;outline:none;border:0!important;background:transparent!important;box-shadow:none!important}
+#home #wishTree:focus-visible{outline:1px dashed #f4e5b5!important;outline-offset:4px}
+.tree-whisper{position:absolute;bottom:100%;right:5px;padding:7px 10px;border-radius:5px;background:#fff5deed;color:#6a795c;white-space:nowrap;font:11px KaiTi,STKaiti,serif;opacity:0;pointer-events:none;transition:opacity .25s}
+#home #wishTree:is(:hover,:focus-visible) .tree-whisper{opacity:1}
+#home #treeStars .branch-star button.wish-real-star{display:grid;place-items:center;font-size:0;width:36px;height:36px;min-width:36px;border:0!important;background:transparent!important;box-shadow:none!important;outline:0;filter:none;pointer-events:auto}
+.wish-light-core{display:block;width:6px;height:7px;transform:scale(var(--star-size,1));border-radius:50%;background:#f2dfaa;box-shadow:0 0 5px 2px #dfc78465,0 0 12px #e4d59c55;animation:wish-soft-glow 4.8s ease-in-out infinite;animation-delay:var(--delay)}
+.wish-real-star.fulfilled .wish-light-core{background:#f4d68c;box-shadow:0 0 6px 2px #e7d29770}
+#home #treeStars .wish-real-star:is(:hover,:focus-visible) .wish-light-core{box-shadow:0 0 9px 3px #e8d6a0aa}
+#home #treeStars .wish-real-star:focus-visible{outline:1px dashed #fff2cd!important;border-radius:50%}
+.wishbook-flight{position:fixed;width:5px;height:5px;z-index:2147483640;background:#f8e6ae;border-radius:50%;box-shadow:0 0 7px 2px #e6ca7e77;pointer-events:none}
+.wishbook-meteor{position:fixed;width:21px;height:2px;z-index:2147483640;background:linear-gradient(90deg,transparent,#e8cf91);border-radius:2px;pointer-events:none}
+@keyframes wish-soft-glow{0%,100%{opacity:.65}50%{opacity:.95}}
+#magicWishBook{position:fixed;width:min(900px,calc(100vw - 34px));max-width:none;max-height:89dvh;margin:auto;padding:0;border:1px solid #b6cbd0;border-radius:19px 7px 18px 7px;background:linear-gradient(130deg,#edf6f7,#fff8e6 50%,#e6eff0);box-shadow:0 22px 80px #244b5c55;overflow:auto;color:#56717a;overscroll-behavior:contain}
+#magicWishBook::backdrop{background:#23475468;backdrop-filter:blur(3px)}
+.wishbook-shell{padding:30px 34px 19px;position:relative}
+.wishbook-close{position:absolute;top:13px;right:15px}
+.wishbook-heading{position:static;display:block;background:none;box-shadow:none;border:0;padding:10px 60px 17px;text-align:center;height:auto}
+.wishbook-heading>span{font:9px Georgia,serif;letter-spacing:.2em;color:#9d8d61}.wishbook-heading h2{font:30px KaiTi,STKaiti,serif;font-weight:500;color:#53798b;margin:10px 0}.wishbook-heading p{font-size:12px;color:#8c987f;line-height:1.7;margin:0}
+#magicWishBook button{border:1px solid #c7ccb5;background:#fff9e9ab;color:#647e7f;box-shadow:none;border-radius:6px;padding:8px 12px;font:12px inherit;cursor:pointer}
+#magicWishBook button:hover{background:#e8f1ed}#magicWishBook button:focus-visible{outline:2px solid #99bec9;outline-offset:3px}
+.wishbook-filters{display:flex;justify-content:center;align-items:center;gap:18px;margin:0 0 16px}.wishbook-filters label{display:flex;align-items:center;gap:7px;font-size:11px;color:#8a967f}
+#magicWishBook select{max-width:160px;border:1px solid #bcced0;background:#f8fcf5;color:#668189;border-radius:4px;padding:6px;font:12px inherit}
+.wishbook-pages{position:relative;min-height:210px;max-height:48dvh;overflow:auto;border:1px solid #d6d8ba;padding:22px 24px;background:linear-gradient(90deg,#fff9e9,#f6f0de 49.6%,#dccfad 50%,#fff9e9 50.5%);border-radius:7px;box-shadow:inset 0 0 20px #cfbd8d12;scrollbar-width:thin;scrollbar-color:#bcc9bd transparent}
+.wishbook-list{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:15px 36px}
+#magicWishBook .wishbook-entry{display:grid;gap:8px;min-height:90px;border:0;border-radius:0;background:none;text-align:left;border-bottom:1px dashed #d4c9a8;padding:7px 1px 13px;color:#5f7475;min-width:0}
+.wishbook-date{font:11px Georgia,serif;letter-spacing:.07em;color:#9a9779}.wishbook-entry b{font:18px/1.6 KaiTi,STKaiti,serif;overflow-wrap:anywhere;font-weight:500}.wishbook-entry small{font-size:10px;color:#a29b7d}.wishbook-entry.wish-is-done small{color:#819874}
+.wishbook-detail{padding:8px 12px;text-align:center}.wishbook-detail h3,.wishbook-empty h3,#wishbookForm h3{font:25px/1.6 KaiTi,STKaiti,serif;font-weight:500;color:#5d7e88;overflow-wrap:anywhere;margin:10px 0 14px}.wishbook-detail p{white-space:pre-wrap;overflow-wrap:anywhere;font-size:14px;line-height:1.9}.wishbook-state{color:#a08e61;font-size:12px!important}
+.wishbook-detail-actions{display:flex;justify-content:center;gap:9px;flex-wrap:wrap;margin-top:23px}.wishbook-detail-actions p{width:100%;font-size:12px}
+.wishbook-empty{text-align:center;padding:20px 0}.wishbook-empty p{font-size:13px;line-height:1.8;color:#92977e}
+.wishbook-footer{display:flex;justify-content:center;gap:15px;padding:17px 0 0;position:static;background:none;border:0;box-shadow:none;min-height:0}.wishbook-footer #wishbookWrite{color:#9b8453;border-color:#d1bf95}
+#wishbookStatus{min-height:17px;text-align:center;color:#9a966b;font-size:11px;margin:10px 0 0;line-height:1.6}
+#wishbookForm{display:grid;gap:13px;padding:0 10px}#wishbookForm label{display:grid;gap:6px;font-size:12px;color:#8b977f}#wishbookForm textarea,#wishbookForm input{box-sizing:border-box;width:100%;border:1px solid #c8d3bf;background:#fffcf1;border-radius:4px;padding:9px;color:#607c80;font:14px/1.7 inherit}.wishbook-form-row{display:grid;grid-template-columns:1fr 1fr;gap:25px}#wishbookForm .wishbook-check{display:flex;align-items:center;gap:8px}#wishbookForm input[type=checkbox]{width:15px;accent-color:#91ab9c}#wishbookForm small{font-size:10px;color:#9e9a7e;line-height:1.7}
+#magicWishBook [hidden]{display:none!important}
+@media(max-width:650px){.wishbook-shell{padding:48px 12px 13px}.wishbook-heading{padding:0 5px 15px}.wishbook-heading h2{font-size:24px}.wishbook-heading>span{font-size:8px}.wishbook-heading p{font-size:11px}.wishbook-filters{gap:10px}.wishbook-filters label{display:grid;gap:5px}.wishbook-pages{padding:14px 12px;max-height:48dvh;background:#fff9e9}.wishbook-list{grid-template-columns:1fr;gap:9px}#magicWishBook .wishbook-entry{min-height:70px}.wishbook-entry b{font-size:17px}.wishbook-detail{padding:0}.wishbook-detail h3{font-size:22px}.wishbook-detail-actions{gap:7px}.wishbook-form-row{grid-template-columns:1fr;gap:10px}.tree-whisper{max-width:150px;white-space:normal;min-width:130px}.wishbook-footer{gap:8px}#magicWishBook .wishbook-close{font-size:11px;padding:6px 8px}}
+@media(prefers-reduced-motion:reduce){.wish-light-core{animation:none}}
+
+#memoryFireflies .firefly-world{grid-template-rows:auto auto auto auto auto auto auto}
+#memoryFireflies .firefly-arc{height:clamp(150px,23vh,220px);min-height:150px}
+#memoryFireflies.is-album .firefly-arc{height:26vh;min-height:210px}
+#magicWishBook[open],#memoryFireflies[open]{animation:none}
+#magicWishBook .wishbook-heading{position:static;inset:auto;width:auto;max-width:none;margin:0;z-index:auto}
+@media(max-width:650px){#memoryFireflies .firefly-world{grid-template-rows:auto auto auto auto auto auto auto}#memoryFireflies .firefly-arc{height:175px;min-height:175px}#memoryFireflies.is-album .firefly-arc{height:210px;min-height:210px}}
+
+.wishbook-filters label{white-space:nowrap}#magicWishBook .wishbook-filters select{width:auto;min-width:96px}
+
+#magicWishBook{border-radius:12px 22px 22px 12px;box-shadow:-7px 0 0 #a6bdc3,-11px 0 0 #d9e6e4,0 20px 70px #244b5c50}
+#magicWishBook .wishbook-pages{min-height:300px;background:linear-gradient(90deg,#d9ccb0 0,#f5ecd7 2%,#fff9e9 7%,#fffbef 94%,#eee2c6 100%);border-radius:3px 12px 12px 3px;box-shadow:inset 7px 0 12px #b6a47d26,2px 3px 0 #e4d7b9,4px 6px 0 #f5ecd7}
+#magicWishBook .wishbook-detail{min-height:260px;display:flex;flex-direction:column;justify-content:center;padding:20px 42px}
+#magicWishBook .wishbook-detail h3{font-size:30px;line-height:1.9;margin:24px 0;color:#5e7e87}
+#magicWishBook .wishbook-detail .wishbook-date{letter-spacing:.14em}
+#magicWishBook .wishbook-detail-actions{margin-top:25px;padding-top:16px;border-top:1px dashed #d7cba8}
+@media(max-width:650px){#magicWishBook .wishbook-detail{padding:12px 6px;min-height:260px}#magicWishBook .wishbook-detail h3{font-size:25px}}
+
+#magicWishBook{width:min(1040px,calc(100vw - 20px));border:0;background:transparent;box-shadow:none;border-radius:0;max-height:95dvh}
+#magicWishBook::backdrop{background:#21475591;backdrop-filter:blur(4px)}
+#magicWishBook .wishbook-shell{padding:44px 20px 20px}
+#magicWishBook .wishbook-heading{padding:0 60px 8px;color:#fff1cb;text-shadow:0 1px 4px #244352}
+#magicWishBook .wishbook-heading h2{color:#f9f2d8;margin:5px 0;font-size:27px}#magicWishBook .wishbook-heading p,#magicWishBook .wishbook-heading>span{color:#e9e5cf}
+#magicWishBook .wishbook-filters{margin:8px 0 0}#magicWishBook .wishbook-filters label{color:#eee8d3}
+#magicWishBook .wishbook-pages{aspect-ratio:1.6;min-height:0;max-height:none;border:0;padding:0;background:transparent url('/assets/magic-open-book.svg') center/100% 100% no-repeat;box-shadow:none;overflow:visible;position:relative}
+#magicWishBook .wishbook-pages:before{content:'写给未来的自己';position:absolute;left:14%;top:38%;width:28%;text-align:center;font:clamp(17px,2vw,27px) KaiTi,STKaiti,serif;letter-spacing:.2em;color:#779dac}
+#magicWishBook .wishbook-pages:after{content:'愿每一份期待，\A 都在时光里慢慢开花。';white-space:pre;position:absolute;left:14%;top:48%;width:28%;text-align:center;font:14px/2.2 KaiTi,STKaiti,serif;color:#91a6a0;pointer-events:none}
+#magicWishBook .wishbook-detail{position:absolute;left:54%;top:22%;width:35%;height:51%;min-height:0;margin:0;padding:12px 5px;overflow:auto;justify-content:center;scrollbar-width:thin}
+#magicWishBook .wishbook-detail h3{font-size:clamp(18px,2.2vw,28px);margin:15px 0;line-height:1.8}#magicWishBook .wishbook-detail p{font-size:13px}
+#magicWishBook .wishbook-tools .wishbook-detail-actions{margin:0;justify-content:center;border:0;padding:0}#magicWishBook .wishbook-tools button{background:#f9f4e7e8}
+#magicWishBook .wishbook-footer{padding-top:12px}#magicWishBook .wishbook-footer button{background:#faf4dfe8}#magicWishBook #wishbookStatus{color:#f1e6bf}
+#magicWishBook .wishbook-close{background:#faf6eae8;z-index:3}
+#magicWishBook .wishbook-pages:has(form){aspect-ratio:auto;min-height:300px;max-height:52dvh;overflow:auto;padding:24px;background:linear-gradient(110deg,#e6f0f2,#fff8e7);border-radius:10px}
+#magicWishBook .wishbook-pages:has(form):before,#magicWishBook .wishbook-pages:has(form):after{display:none}
+#magicWishBook .wishbook-empty{position:absolute;left:53%;width:36%;top:25%;padding:5px}.wishbook-turn-leaf{position:absolute;left:50%;top:15%;width:42%;height:67%;background:linear-gradient(90deg,#cbdedc,#fff9e9 15%,#e9f3f2);transform-origin:left center;z-index:4;box-shadow:5px 4px 12px #587a7e2b;border-radius:0 12px 7px 0;pointer-events:none}
+@media(max-width:650px){#magicWishBook .wishbook-shell{padding:44px 2px 12px}#magicWishBook .wishbook-heading{padding:0 8px 8px}#magicWishBook .wishbook-heading h2{font-size:23px}#magicWishBook .wishbook-heading p{font-size:10px}#magicWishBook .wishbook-pages{aspect-ratio:1.2;background-size:100% auto}#magicWishBook .wishbook-pages:before,#magicWishBook .wishbook-pages:after{display:none}#magicWishBook .wishbook-detail{left:13%;width:74%;top:22%;height:50%;padding:0 8px}#magicWishBook .wishbook-detail h3{font-size:21px;margin:8px 0}#magicWishBook .wishbook-detail .wishbook-date{font-size:10px}#magicWishBook .wishbook-detail .wishbook-state{font-size:10px!important}#magicWishBook .wishbook-tools button{font-size:11px;padding:6px 9px}#magicWishBook .wishbook-empty{left:15%;width:70%;top:25%}.wishbook-turn-leaf{top:22%;height:51%}}
+@media(min-width:651px){#magicWishBook{width:min(1000px,calc(100vw - 24px),calc((100dvh - 300px)*1.6));min-width:min(560px,calc(100vw - 24px))}}

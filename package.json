@@ -1,0 +1,6 @@
+{
+  "name": "grassland-birthday",
+  "private": true,
+  "engines": { "node": ">=24" },
+  "scripts": { "start": "node server.mjs" }
+}

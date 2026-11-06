@@ -1,0 +1,77 @@
+html:has(#home:not([hidden])){overflow:hidden}
+body:has(#home:not([hidden])){height:100dvh;min-height:0;display:flex;flex-direction:column;background:#e7f7fb;overflow:hidden}
+body:has(#home:not([hidden])) .sky{display:none}
+body:has(#home:not([hidden])) header{flex:none;width:100%;max-width:1440px;margin:0 auto;padding: max(7px,env(safe-area-inset-top)) clamp(8px,3vw,40px) 7px;gap:4px}
+body:has(#home:not([hidden])) header nav{flex:none}
+body:has(#home:not([hidden])) main{flex:1;min-height:0}
+#home{display:grid;grid-template-rows:auto minmax(0,1fr) auto auto;height:100%;min-width:0}
+#home .hero{padding:4px 8px 8px;background:linear-gradient(#e7f7fb,#d4effd)}
+#home .hero h1{font-size:clamp(1.45rem,4.5vh,2.85rem);margin:.15em 0}
+.village-viewport{position:relative;min-width:0;min-height:0;container-type:size;overflow:hidden;background:#d4effd}
+#home .meadow{position:relative;isolation:isolate;width:max(100%,200cqh);height:max(100%,50cqw);margin:0;left:50%;top:50%;transform:translate(-50%,-50%);transition:filter .25s}
+#home .meadow.approach{filter:blur(3px)}
+#home .meadow .landscape{position:absolute;inset:0;background:url('/assets/village.svg') center/cover no-repeat;pointer-events:none}
+#home .meadow .landscape::before,#home .meadow .landscape::after{content:none}
+#home .cast{position:absolute;inset:0;pointer-events:none}
+#home .actor-slot{position:absolute;left:var(--x);top:var(--y);width:calc(clamp(83px,15cqh,150px)*var(--depth));transform:translate(-50%,-100%);pointer-events:none}
+#home .actor{position:relative;display:grid;justify-items:center;width:100%;padding:0;background:none;border:0;box-shadow:none;pointer-events:auto}
+#home .actor::before{content:"";position:absolute;bottom:28px;width:62%;height:8px;border-radius:50%;background:#46644848;filter:blur(4px);z-index:-1}
+#home .actor img{display:block;max-width:100%;width:auto;max-height:calc(clamp(90px,19cqh,180px)*var(--depth));object-fit:contain;transform-origin:bottom center}
+#home .actor-name{font-size:.74rem;font-weight:700;line-height:1.25;text-shadow:0 1px #f8f9da}
+#home .actor-name small{display:block;font-size:.62rem;font-weight:400}
+#home .actor.locked small::after{content:" · 寿星专属"}
+#home .sheep img{clip-path:ellipse(46% 40% at 50% 60%)}
+#home .mei img{clip-path:ellipse(47% 50% at 50% 50%)}
+#home .lazy img{clip-path:ellipse(46% 44% at 50% 56%)}
+#home .warm img,#home .slow img{aspect-ratio:1;object-fit:cover;object-position:center bottom;border-radius:30%}
+#home .wolf img{clip-path:polygon(11% 56%,18% 42%,15% 20%,20% 18%,32% 21%,45% 13%,62% 8%,70% 10%,77% 20%,89% 18%,92% 20%,87% 36%,84% 42%,91% 53%,88% 63%,90% 74%,82% 86%,74% 88%,76% 100%,33% 100%,23% 97%,13% 89%,12% 83%,19% 75%,24% 84%,38% 77%,24% 69%,13% 63%)}
+#home .wolf img[src$="fj91OCcuG.jpeg"]{clip-path:ellipse(44% 49% at 50% 50%)}
+#home .actor-slot.talking{z-index:6}
+#home .actor-slot.talking img{animation:hello .35s ease both}
+#home .actor-slot.facing-left img{scale:-1 1}
+@keyframes hello{50%{transform:translateY(-4px) rotate(-3deg)}}
+#home .speech{position:absolute;z-index:3;width:min(220px,75cqw);padding:8px 10px;border:1px solid #a8cbd7;border-radius:12px;background:#fffdf5;box-shadow:0 5px 12px #315d7527;pointer-events:auto;text-align:center}
+#home .speech p{margin:0 0 4px;font-size:.78rem}
+#home .speech .dialogue-art{display:none}
+#home .speech-options button{padding:4px 6px;font-size:.7rem}
+#home .world-prop,#home .snack{position:absolute;width:clamp(28px,6cqh,48px);padding:0;border:0;background:none;box-shadow:none;z-index:2;pointer-events:auto}
+#home .world-prop svg,#home .snack svg{display:block;width:100%}
+#home [data-prop="door"]{left:48.9%;top:44%;width:27px}
+#home [data-prop="flowers"]{left:18%;top:83%}
+#home [data-prop="cloud"]{left:66%;top:23%}
+#home [data-prop="pond"]{left:62%;top:83%}
+#home [data-prop="balloons"]{left:59%;top:43%}
+#home [data-prop="camera"]{left:77%;top:82%}
+#home .snack{left:100%;top:auto;bottom:12px;width:24px}
+#doorGuest{position:absolute;left:48.5%;top:42%;width:39px;height:40px;object-fit:cover;object-position:center 70%;border-radius:9px;z-index:3}
+#worldRipple{position:absolute;width:22px;height:22px;border:2px solid #fffdf0;border-radius:50%;translate:-50% -50%;pointer-events:none}
+#home .village-status{text-align:center;min-height:1em;margin:0;font-size:.73rem;background:#eaf4da}
+#home .village-footer{background:#eaf4da;justify-content:center;padding:6px 8px max(7px,env(safe-area-inset-bottom));gap:12px}
+#exploreDrawer{position:fixed;inset:0 0 0 auto;margin:auto 0 auto auto;width:min(100% - 16px,350px);max-height:90dvh;padding:15px}
+.drawer-heading{display:flex;align-items:center;justify-content:space-between;gap:6px}
+.drawer-tools{display:grid;gap:8px;margin-top:10px}
+.photo-set{padding:10px;background:#e6f3dd;text-align:center}
+.photo-cast{display:grid;grid-template-columns:repeat(3,1fr);gap:5px}
+.photo-cast figure{margin:0}
+.photo-cast img{width:min(100%,90px);aspect-ratio:1;object-fit:cover;object-position:center 75%;border-radius:8px}
+.photo-set.developed img{display:block;width:100%}
+@media(max-width:650px){
+ body:has(#home:not([hidden])) header nav button{padding:5px 6px;font-size:.7rem}
+ body:has(#home:not([hidden])) header b{font-size:.74rem;letter-spacing:0}
+ .village-viewport{overflow-x:auto;overflow-y:hidden;overscroll-behavior-x:contain}
+ #home .meadow{width:max(740px,200cqh);height:100%;left:0;top:0;transform:none;background:#d4effd}
+ #home .actor-slot{width:calc(90px*var(--depth))}
+ #home .actor img{max-height:calc(102px*var(--depth))}
+ #home .village-footer{font-size:.72rem}
+ #exploreDrawer{inset:auto 0 0;margin:0 auto;width:calc(100% - 16px);padding-bottom:max(15px,env(safe-area-inset-bottom))}
+}
+
+
+@media(max-width:650px){#home .village-footer span::after{content:" · 可左右探索";color:#52734c}}
+#home .hero{background:radial-gradient(ellipse 72px 17px at 17% 48%,#f4fcffb0 96%,transparent),radial-gradient(ellipse 35px 21px at 16% 35%,#f4fcffb0 96%,transparent),linear-gradient(#e7f7fb,#d4effd)}
+#home .meadow .landscape::before{content:"";display:block;position:absolute;inset:auto 0 max(0px,calc((100% - 100cqh)/2));height:clamp(18px,5cqh,46px);background:linear-gradient(transparent,#c2daa9)}
+#home .cast{height:min(100%,100cqh);top:50%;bottom:auto;transform:translateY(-50%)}
+#home .village-status,#home .village-footer{background:#c2daa9}
+#home .village-footer{padding-top:3px}
+#home .village-status:empty{display:none}
+.photo-cast .group-original{grid-column:1/-1;width:100%;height:auto;aspect-ratio:auto;object-fit:contain}

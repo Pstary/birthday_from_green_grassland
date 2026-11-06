@@ -1,0 +1,38 @@
+#dialog[data-world=candle] .banquet-table{position:relative;width:min(100%,320px,44dvh);margin:24px auto 12px}
+#dialog[data-world=candle] .watercolor-cake{display:block;width:100%;height:auto}
+.castle-tip{position:absolute;width:0;height:0;pointer-events:none}
+.castle-tip i,.castle-tip b,.castle-tip em{position:absolute;left:0;bottom:0;opacity:0}
+.castle-tip i{width:10px;height:17px;border-radius:70% 30% 63% 37%;background:radial-gradient(ellipse at 50% 76%,#fffad5,#ffd464 56%,#e49b32);box-shadow:0 0 9px 2px #ffd26985;transform-origin:50% 100%;translate:-50% 0;transition:opacity .25s}
+.castle-tip.is-lit i{opacity:1;animation:castle-flicker .72s ease-in-out infinite alternate}
+.castle-tip b{color:#f1b748;font-size:15px;text-shadow:0 0 6px #ffe7a2}
+.castle-tip.is-lit b{animation:castle-spark .52s ease-out both}
+.castle-tip em{width:8px;height:12px;border-radius:50%;background:#9d9c977d;filter:blur(2px)}
+.castle-tip.is-out em{animation:castle-smoke .76s ease-out both}
+.castle-controls{display:flex;flex-wrap:wrap;justify-content:center;gap:12px 20px}
+@keyframes castle-flicker{to{transform:rotate(8deg) scale(.89,1.08)}}
+@keyframes castle-spark{0%{opacity:0;transform:translate(-50%,0)}35%{opacity:1}100%{opacity:0;transform:translate(3px,-23px)}}
+@keyframes castle-smoke{0%{opacity:.65;transform:translate(-50%,0)}100%{opacity:0;transform:translate(7px,-27px) scale(2)}}
+@media(prefers-reduced-motion:reduce){.castle-tip.is-lit i,.castle-tip.is-lit b,.castle-tip.is-out em{animation:none}}
+#dialog[data-world=candle]{width:min(94vw,530px);max-height:96dvh;border:0;background:none;box-shadow:none;padding:16px 10px;color:#fff8e6}
+#dialog[data-world=candle]::backdrop{background:#314b4d24;backdrop-filter:blur(5px) saturate(.83)}
+#dialog[data-world=candle] #close{position:absolute;top:12px;right:10px;width:30px;height:30px;padding:0;display:grid;place-items:center;line-height:1;font-size:20px;border:1px solid #d9cfb6;border-radius:7px;color:#4e665b;background:#fff8e9;box-shadow:0 2px 5px #34483c24}
+#dialog[data-world=candle] .banquet-table{width:min(85%,340px,55dvh);margin:20px auto 14px}
+#dialog[data-world=candle] .castle-tip{width:36px;height:38px;padding:0;border:0;border-radius:50%;background:none;box-shadow:none;pointer-events:auto;translate:-50% -72%}
+#dialog[data-world=candle] .castle-tip:is(:hover,:focus-visible):not(.is-lit){outline:1px solid #fff2bd;box-shadow:0 0 12px #ffedb5aa}
+#dialog[data-world=candle] .castle-tip i,#dialog[data-world=candle] .castle-tip b,#dialog[data-world=candle] .castle-tip em{left:50%;bottom:28%;pointer-events:none}
+#dialog[data-world=candle] .status{width:fit-content;max-width:100%;margin:10px auto 0;padding:5px 11px;border-radius:8px;background:#fff8e9eb;color:#334c42;font-size:.82rem}
+#dialog[data-world=candle] .castle-controls[hidden]{display:none}
+
+#dialog[data-world=candle] .castle-controls button{
+ color:#314c45;
+ background:#fff9eb;
+ border:1px solid #b9c5b2;
+ box-shadow:0 2px 6px #34483c30;
+}
+#dialog[data-world=candle] .castle-controls button:hover,
+#dialog[data-world=candle] #close:hover{background:#fffdf4}
+
+#dialog[data-world=candle]{width:min(74vw,1120px,116dvh);max-width:calc(100vw - 18px)}
+#dialog[data-world=candle] .banquet-table{width:min(85.5%,calc(66.5dvh * .886));margin:22px auto 14px}
+@media(max-width:600px){#dialog[data-world=candle]{width:94vw}}
+

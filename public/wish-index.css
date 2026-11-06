@@ -1,0 +1,89 @@
+#magicWishBook.showing-wish-index .wish-paper-ball{display:none!important}
+#magicWishBook.showing-wish-index .wishbook-pages{container-type:inline-size}
+#magicWishBook .wish-index-page{
+ position:absolute;inset:17% auto 15% 10%;width:35%;overflow:hidden;
+ display:flex;flex-direction:column;color:#45636b;font:clamp(9.88768px,2.039334cqw,23.48324px)/1.25 KaiTi,STKaiti,serif;
+}
+#magicWishBook .wish-index-page:nth-child(2){left:55%}
+#magicWishBook .wish-index-page h3{margin:0 0 .55em;color:#587780;font-size:1.5em;font-weight:500;letter-spacing:.13em}
+#magicWishBook .wish-index-page ol{list-style:none;margin:0;padding:0;display:grid;gap:.2em}
+#magicWishBook .wish-index-page li{min-width:0}
+#magicWishBook .wish-index-page li button{
+ display:flex;align-items:baseline;gap:.24em;min-width:0;width:100%;padding:.36em .14em;
+ border:0;border-radius:4px;background:transparent;color:inherit;box-shadow:none;font:inherit;text-align:left;
+}
+#magicWishBook .wish-index-page li button:is(:hover,:focus-visible){background:#fff9e1ba}
+#magicWishBook .index-star{color:#778e89;flex:none}
+#magicWishBook .index-star.is-done{color:#a57c36}
+#magicWishBook .wish-index-page li button:hover .index-star{text-shadow:0 0 7px #deb15b;color:#a57c36}
+#magicWishBook .index-title{min-width:0;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+#magicWishBook .index-leader{flex:1;min-width:.25em;border-bottom:1px dotted #b5a07b}
+#magicWishBook .wish-index-page time{flex:none;white-space:nowrap;font: .75em Georgia,serif;color:#74664f}
+#magicWishBook .index-page-number{margin:auto auto 0;color:#8b7959;font: .8em Georgia,serif}
+
+#magicWishBook .index-flower{
+ position:absolute;top:5%;z-index:5;width:8%;height:12%;min-width:24px;padding:0;
+ border:0;border-radius:50%;background:transparent;box-shadow:none;
+}
+#magicWishBook .index-flower-prev{left:4.5%}
+#magicWishBook .index-flower-next{right:4.5%}
+#magicWishBook .index-flower:enabled:is(:hover,:focus-visible){background:radial-gradient(ellipse,#fff2c771,transparent 72%);outline:1px dotted #9e825c}
+#magicWishBook .index-flower:disabled{opacity:1;cursor:default;pointer-events:none}
+
+#magicWishBook .wish-unfolded-page{
+ clip-path:none;
+ border:1px solid #d4bc91;
+ border-radius:4px;
+ background:linear-gradient(110deg,#fff7e5,#f8ead0) !important;
+ box-shadow:inset 0 0 0 5px #fff9e7,inset 0 0 0 6px #dcc7a2;
+}
+#magicWishBook .wish-unfolded-page .wish-paper-creases{display:none}
+
+#magicWishBook .wish-unfolded-page .wish-refold{
+ top:3%;right:4%;left:auto;width:clamp(42px,15%,70px);aspect-ratio:1;
+ padding:0;border:0;border-radius:50%;box-shadow:none;color:transparent;
+ font-size:0;background:transparent url('/assets/wish-country-leaf.svg') right top / 350% auto no-repeat;
+ cursor:pointer;
+}
+#magicWishBook .wish-unfolded-page .wish-refold:is(:hover,:focus-visible){
+ filter:brightness(1.07);outline:1px dotted #8ca2aa;outline-offset:2px;
+}
+
+#magicWishBook .wish-unfolded-page::before{
+ content:"";
+ position:absolute;
+ inset:7px;
+ z-index:-1;
+ pointer-events:none;
+ background:url('/assets/wish-country-leaf.svg') center/100% 100% no-repeat;
+ mask-image:radial-gradient(ellipse 34% 31% at 88% 13%,#000 36%,transparent 94%),radial-gradient(ellipse 47% 30% at 87% 89%,#000 42%,transparent 96%);
+}
+#magicWishBook .wish-unfolded-page .wish-refold{
+ top:3%;right:3%;width:24%;height:23%;aspect-ratio:auto;
+ background:none;
+}
+
+#magicWishBook .wish-unfolded-page::before{
+ mask-image:radial-gradient(ellipse 28% 25% at 83% 14%,#000 31%,transparent 96%),radial-gradient(ellipse 46% 16% at 82% 86%,#000 32%,transparent 94%);
+ clip-path:inset(5% 4% 6% 1%);
+}
+#magicWishBook .wish-unfolded-page .wish-refold{
+ top:7%;right:7.5%;width:10%;height:7%;min-width:0;min-height:0;
+ background:none;outline:none;filter:none;
+}
+#magicWishBook .wish-unfolded-page .wish-refold:hover{outline:none;box-shadow:none;background:none;filter:none}
+#magicWishBook .wish-unfolded-page .wish-refold:focus-visible{outline:1px dotted #69868e;outline-offset:2px}
+#magicWishBook.has-unfolded-wish .wishbook-stage,
+#magicWishBook.has-unfolded-wish .wishbook-heading,
+#magicWishBook.has-unfolded-wish .wish-paper-ball{filter:blur(2px);opacity:.78}
+#magicWishBook.has-unfolded-wish .wishbook-close{visibility:hidden}
+
+#magicWishBook .wish-unfolded-page{overflow:hidden}
+#magicWishBook .wish-unfolded-page::before{
+ inset:0;
+ clip-path:none;
+ background-size:109% 116%;
+ background-position:right center;
+ mask-image:radial-gradient(ellipse 43% 29% at 96% 1%,#000 46%,transparent 98%),radial-gradient(ellipse 60% 30% at 96% 99%,#000 46%,transparent 98%);
+}
+#magicWishBook .wish-unfolded-page .wish-refold{top:2.5%;right:5%;width:10%;height:7%}

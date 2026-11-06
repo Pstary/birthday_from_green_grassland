@@ -1,0 +1,91 @@
+#houseLights{position:absolute;top:53%;left:50%;transform:translateX(-50%);font-size:.65rem;color:#426a65;white-space:nowrap;pointer-events:none}
+#home[data-time="dusk"] .landscape{filter:sepia(.2) hue-rotate(328deg) saturate(.83)}
+#home[data-time="night"] #houseLights,#home.gold-house #houseLights,#home.party-house #houseLights{background:#fff2bd;padding:3px 7px;border-radius:8px;box-shadow:0 0 17px #ffdd90}
+#home[data-time="night"] .actor-name{color:#fff6db;text-shadow:0 1px 3px #152e42}
+.blossoms,.room-shelf,.final-cast{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:8px;margin:12px 0}
+.blossoms button{border-radius:12px;min-width:0;padding:4px}
+.blossoms span{display:block;font-size:2.1rem;color:var(--petal);line-height:1}
+.blossoms small{overflow-wrap:anywhere}
+.wish-canopy{margin:12px 0;padding:12px;border-radius:40% 30% 25% 35%;background:#d7ead2;display:flex;flex-wrap:wrap;justify-content:center;gap:7px}
+.wish-canopy button{font-size:1.5rem;line-height:1;color:#586f87;background:#fffdf2}
+.wish-canopy .fulfilled{color:#85550e;background:#ffe399;box-shadow:0 0 10px #e7b54a9c}
+.house-interior{margin-top:10px;padding:12px;border:1px solid #c8dce0;border-radius:14px;background:linear-gradient(#e0f2f5 55%,#efe2ca 55%)}
+.room-window{display:flex;justify-content:space-between;align-items:center;gap:6px;background:#fcf8eb;padding:5px 8px;border-radius:9px}
+.room-shelf button{padding:4px;min-width:0;font-size:.72rem}
+.room-shelf img{width:58px;display:block;margin:auto}
+.gift-list{list-style:none;padding:0}.gift-list li{display:flex;justify-content:space-between;gap:5px;padding:7px;border-bottom:1px dashed #c1d6de}
+.final-cast img{width:100%;height:94px;object-fit:contain;border-radius:8px;animation:hello .45s both}
+.final-cast img:nth-child(even){animation-delay:.13s}
+
+#home .hero{padding-block:0 3px}
+#home .hero h1{font-size:clamp(1.35rem,3.9vh,2.45rem);margin:.02em 0 .06em}
+#home .actor-slot{width:calc(clamp(122px,23cqh,242px)*var(--depth))}
+#home .actor img{max-height:calc(clamp(125px,28cqh,257px)*var(--depth))}
+#home .actor::before{width:59%;height:9px;background:#3d603b38;filter:blur(4px)}
+.garden-bed,.wish-grove{position:absolute;z-index:2;transform:translate(-50%,-100%);pointer-events:none}
+.garden-bed{left:19%;top:93%;width:clamp(123px,14%,230px)}
+.wish-grove{left:85%;top:69%;width:clamp(106px,11%,174px)}
+.garden-bed button,.wish-grove button{pointer-events:auto;border:0;background:transparent;box-shadow:none;padding:0;line-height:1}
+#gardenGate,#wishTree{display:block;width:100%;position:relative}
+#gardenGate img,#wishTree img{display:block;width:100%;height:auto}
+#gardenCount,#treeCount{position:absolute;right:12%;bottom:9%;font-size:.7rem;color:#375c46}
+#gardenMailbox{position:absolute;left:4%;bottom:27%;width:25%;min-width:32px}
+#gardenMailbox img{width:100%}
+.scene-blooms,.scene-stars{position:absolute;display:flex;gap:2px;pointer-events:none}
+.scene-blooms{left:23%;right:12%;bottom:16%;align-items:end}
+.scene-blooms button{width:20%;min-width:22px;transform-origin:bottom}
+.scene-blooms button:nth-child(even){translate:0 4px}
+.scene-blooms svg{display:block;width:100%}
+.scene-stars{left:22%;right:20%;top:34%;justify-content:space-around;flex-wrap:wrap}
+.scene-stars button{color:#fff9db;font-size:clamp(17px,2vw,23px);text-shadow:0 1px 2px #56734f;min-width:22px;min-height:22px}
+.scene-stars button:nth-child(even){translate:0 12px}
+.scene-stars button.lit{color:#ffdc75;text-shadow:0 0 7px #f6b93c}
+#home [data-prop="door"]{top:40%;transition:rotate .2s,filter .2s}
+#home [data-prop="door"]:is(:hover,:focus-visible){rotate:-6deg;filter:drop-shadow(0 0 8px #ffd987)}
+#home [data-prop="door"]::after{content:"里面好像藏着惊喜！";position:absolute;left:50%;bottom:100%;translate:-50% 0;width:max-content;background:#fff8df;border-radius:6px;padding:4px 7px;font-size:.7rem;opacity:0;pointer-events:none}
+#home [data-prop="door"]:is(:hover,:focus-visible)::after{opacity:1}
+#home [data-prop="camera"]{left:91%;top:83%}
+#home [data-prop="flowers"]{left:29%;top:87%}
+#home [data-prop="pond"]{left:55%;top:85%}
+#home .village-footer{padding-block:3px max(6px,env(safe-area-inset-bottom))}
+@media(max-width:650px){
+ body:has(#home:not([hidden])) header{padding-inline:5px}
+ body:has(#home:not([hidden])) header nav{gap:3px}
+ body:has(#home:not([hidden])) header nav button{padding:5px 4px;font-size:.65rem}
+ #home .actor-slot{width:calc(130px*var(--depth))}
+ #home .actor img{max-height:calc(147px*var(--depth))}
+ .garden-bed{left:15%;top:87%}.wish-grove{left:85%;top:67%}
+}
+#home[data-time="night"] .hero{background:linear-gradient(#dceff8,#aec6df)}
+
+#home .meadow .landscape{background-position:center 47%}
+#home[data-time="night"] .meadow .landscape{background-image:url('/assets/village-night.svg');filter:none}
+#home[data-time="night"] .meadow .landscape::before{background:linear-gradient(transparent,#577e79)}
+#home[data-time="night"] :is(.village-footer,.village-status){background:#577e79;color:#fff5de}
+#home .village-footer{font-size:.72rem}
+#home .actor::before{background:#34544445}
+#home [data-prop="door"]{top:42%}
+#home [data-prop="camera"]{left:83%;top:85%}
+#home [data-prop="flowers"]{left:32%;top:84%}
+#home [data-prop="pond"]{left:51%;top:88%}
+#secretWindow{top:36%}
+#secretCake{top:47%}
+#secretBox{left:16%;top:77%}
+@media(max-width:650px){
+ #home .actor-slot.warm{left:20%;top:75%}
+ #home .actor-slot.lazy{left:40%;top:88%}
+ #home .actor-slot.slow{left:77%;top:76%}
+ #home .actor-slot.wolf{left:64%;top:89%}
+}
+
+#home .hero{animation:none} @media(max-width:650px){#home .hero h1{font-size:clamp(1.1rem,5.3vw,1.5rem)}}
+@media(max-width:650px){
+ #home .hero #chapterTitle,#home .hero h1:first-of-type{font-size:clamp(1.08rem,5.15vw,1.45rem)}
+ #home .actor-slot.warm{left:14%;top:78%}
+ #home .actor-slot.slow{left:84%;top:79%}
+ #home .actor-slot.lazy{left:39%;top:92%}
+ #home .actor-slot.wolf{left:66%;top:94%}
+}
+#home #secretCake{left:76%;top:83%;background:url('/assets/candle.svg') center/contain no-repeat}
+#home #secretCake:is(:hover,:focus-visible){filter:drop-shadow(0 0 6px #ffd789)}
+@media(max-width:650px){#home .actor-slot.wolf{left:70%}#home #secretCake{left:76%;top:87%}}

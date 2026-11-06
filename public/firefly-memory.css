@@ -1,0 +1,70 @@
+/* Golden firefly memories live over the existing garden, not in a white modal. */
+#memoryFireflies{position:fixed;inset:0;margin:0;padding:0;width:100vw;max-width:none;height:100dvh;max-height:none;border:0;border-radius:0;background:transparent;color:#fff3ce;overflow:auto;box-shadow:none;overscroll-behavior:contain}
+#memoryFireflies::backdrop{background:rgba(16,39,30,.68);backdrop-filter:blur(2px)}
+.firefly-world{position:relative;min-height:100%;box-sizing:border-box;padding:clamp(22px,5vh,58px) max(18px,5vw) 22px;background:radial-gradient(ellipse at 50% 43%,#a17b2927,transparent 60%);display:grid;grid-template-rows:auto clamp(150px,23vh,220px) auto auto auto;align-content:start;gap:12px}
+.firefly-heading{text-align:center;padding:0 105px}
+.firefly-heading>span{font:10px Georgia,serif;letter-spacing:.28em;color:#e3cf9d}
+.firefly-heading h2{font-family:KaiTi,STKaiti,serif;font-weight:500;font-size:clamp(25px,3vw,39px);letter-spacing:.12em;margin:10px 0}
+.firefly-heading p{margin:0;font-size:13px;color:#ebdfbd}
+#memoryFireflies button{font-family:inherit;border:1px solid #cfb57488;background:#304b37a6;color:#fff0c8;box-shadow:none;border-radius:7px;cursor:pointer;padding:9px 13px}
+#memoryFireflies button:hover{background:#6e693dcc}
+#memoryFireflies button:focus-visible{outline:2px solid #ffe6a0;outline-offset:4px}
+#memoryFireflies button:disabled{opacity:.4;cursor:default}
+#memoryFireflies .firefly-close{position:absolute;right:22px;top:22px;font-size:13px}
+.firefly-arc{position:relative;width:min(1040px,100%);margin:auto;height:100%;min-height:150px}
+.firefly-arc>svg{position:absolute;inset:0;width:100%;height:100%;pointer-events:none;opacity:.43}
+.firefly-arc path{fill:none;stroke:#eac56c;stroke-width:1;stroke-dasharray:2 9}
+#memoryFireflies .memory-firefly{position:absolute;left:var(--x);top:var(--y);translate:-50% -50%;border:0;background:transparent;padding:0;width:48px;height:48px;overflow:visible;z-index:1;transition:filter .2s}
+#memoryFireflies .memory-firefly:hover{background:transparent;filter:brightness(1.2)}
+.firefly-body{display:block;position:absolute;left:20px;top:20px;width:8px;height:10px;border-radius:50%;background:radial-gradient(#fffbd4 10%,#ffda65 60%,#d49631);box-shadow:0 0 8px 3px #f9d46d9c,0 0 24px 8px #ebc65a45;animation:firefly-breathe 3.5s ease-in-out infinite;animation-delay:var(--delay)}
+.firefly-body:before,.firefly-body:after{content:'';position:absolute;top:-3px;width:8px;height:11px;border-radius:80% 15% 75% 30%;background:#fff6d68c;transform:rotate(-32deg);left:-5px}
+.firefly-body:after{left:5px;transform:rotate(32deg) scaleX(-1)}
+.memory-firefly.selected .firefly-body{box-shadow:0 0 12px 5px #ffe49fc9,0 0 36px 12px #ebc65a66}
+.memory-firefly>span{position:absolute;left:50%;top:44px;translate:-50% 0;font:11px Georgia,serif;color:#e8d6a6;white-space:nowrap;text-align:center;pointer-events:none}
+.memory-firefly b{display:block;font:12px/1.5 KaiTi,STKaiti,serif;margin-top:4px;max-width:100px;overflow:hidden;text-overflow:ellipsis;color:#fff3d1}
+.firefly-reading{width:min(770px,100%);margin:6px auto 0;padding:22px 28px;box-sizing:border-box;background:linear-gradient(105deg,#ebd5a7f2,#f8edcffa 47%,#e0ca9df5);color:#58422d;border:1px solid #bda274;border-radius:28px 8px 22px 7px;box-shadow:0 12px 40px #0923183b,inset 0 0 24px #baa06c22;min-height:148px}
+.firefly-story{display:flex;align-items:center;gap:25px;max-height:33vh;overflow:auto;scrollbar-width:thin;scrollbar-color:#b39a70 transparent}
+.memory-story-copy{min-width:0;flex:1}
+.firefly-story h3,.firefly-form h3{font-family:KaiTi,STKaiti,serif;font-weight:500;font-size:26px;margin:8px 0 12px;color:#65472b;overflow-wrap:anywhere}
+.firefly-story p{font-size:14px;line-height:1.9;white-space:pre-wrap;overflow-wrap:anywhere;margin:0}
+.firefly-story .memory-date{font:12px Georgia,serif;letter-spacing:.12em;color:#8b7048}
+.firefly-story figure{width:36%;flex-shrink:0;margin:0;padding:6px 6px 20px;background:#f7f0dd;transform:rotate(2deg);box-shadow:0 3px 8px #4c362d26}
+.firefly-story img{display:block;width:100%;max-height:24vh;object-fit:contain}
+.memory-owner-tools{display:flex;gap:9px;align-items:center;justify-content:flex-end;margin-top:18px;border-top:1px dashed #bca172;padding-top:10px;font-size:12px}
+.memory-owner-tools small{margin-right:auto;color:#8c7957}
+#memoryFireflies .memory-owner-tools button,#memoryFireflies .memory-form-actions button{background:#ede0be;border-color:#baa276;color:#644c2e;padding:6px 11px;font-size:12px}
+.memory-empty{text-align:center;padding:12px 0;color:#836b45}
+.memory-empty h3{font:23px KaiTi,STKaiti,serif;margin:7px 0}
+.memory-empty p{font-size:13px;line-height:1.8}
+.memory-quill{font-size:26px}
+.firefly-tools{display:flex;justify-content:center;align-items:center;gap:12px;margin-top:9px;font-size:12px;flex-wrap:wrap}
+#memoryFireflies #fireflyAdd{border-color:#e3c480;background:#8074428c}
+.firefly-status{font-size:12px;color:#f4de9d;text-align:center;margin:1px 0;min-height:20px}
+.firefly-form{display:grid;gap:9px;max-height:43vh;overflow:auto;padding:0 3px;font-size:13px;scrollbar-width:thin}
+.memory-form-row{display:grid;grid-template-columns:160px 1fr;gap:14px}
+.firefly-form label{display:grid;gap:5px;color:#6b5336;font-size:12px}
+#memoryFireflies .firefly-form input,#memoryFireflies .firefly-form textarea{width:100%;min-width:0;box-sizing:border-box;border:1px solid #bea579;border-radius:5px;padding:8px;background:#fff8eacc;color:#59442d;font:13px inherit}
+.firefly-form .memory-check{display:flex;align-items:center;gap:7px}
+#memoryFireflies .memory-check input{width:15px;accent-color:#907039}
+.firefly-form small{font-size:11px;line-height:1.6;color:#8a7455}
+.memory-form-actions{display:flex;gap:10px;padding:6px 0}
+.firefly-world [hidden]{display:none!important}
+#memoryFireflies.returning .firefly-heading,#memoryFireflies.returning .firefly-reading,#memoryFireflies.returning .firefly-tools,#memoryFireflies.returning .firefly-status,#memoryFireflies.returning .firefly-arc>svg{transition:opacity .35s;opacity:0;pointer-events:none}
+#home .actor-slot.slow .actor{position:relative;overflow:visible}
+#home .actor-slot.slow .actor>img:first-child{clip-path:none;border-radius:0}
+#home .actor-slot.slow .memory-jar-lights{position:absolute;left:6.5%;top:30.5%;width:18.5%;height:12.5%;pointer-events:none}
+.memory-jar-lights i{position:absolute;width:3px;height:3px;border-radius:50%;background:#fff0a3;box-shadow:0 0 3px 1px #ffc95e,0 0 7px #ffc95e;animation:firefly-breathe 3.4s ease-in-out infinite;animation-delay:var(--delay)}
+#home .actor-slot.slow .actor .memory-cork{position:absolute;left:9.5%;top:21.9%;width:12.8%;height:4.7%;max-height:none;aspect-ratio:auto;clip-path:none;object-fit:fill;pointer-events:none;transform-origin:center;transition:transform .7s,opacity .4s}
+#home .actor-slot.slow.jar-open .memory-cork{transform:translateY(-16px) rotate(-15deg)}
+#home .actor-slot.slow.jar-open .memory-jar-lights{opacity:.2;transition:opacity .5s}
+@keyframes firefly-breathe{0%,100%{opacity:.65;filter:brightness(.9)}50%{opacity:1;filter:brightness(1.25)}}
+@media(max-width:650px){
+ .firefly-world{padding:68px 12px 18px;grid-template-rows:auto 180px auto auto auto;gap:9px}
+ .firefly-heading{padding:0 3px}.firefly-heading>span{font-size:8px;letter-spacing:.19em}.firefly-heading h2{font-size:25px;margin:7px 0}.firefly-heading p{font-size:11px;line-height:1.6}
+ #memoryFireflies .firefly-close{right:13px;top:14px;padding:7px 12px}
+ .firefly-reading{padding:17px 16px;margin-top:0}.firefly-story{max-height:30vh;align-items:flex-start;gap:12px}.firefly-story h3{font-size:23px}.firefly-story p{font-size:13px}.firefly-story figure{width:30%;padding:4px 4px 12px}.firefly-story img{max-height:18vh}
+ .memory-firefly>span{font-size:9px;top:43px}.memory-firefly b{max-width:46px;font-size:10px;white-space:normal;max-height:32px;overflow:hidden}
+ .memory-form-row{grid-template-columns:1fr}.firefly-form{max-height:41vh}.memory-owner-tools{flex-wrap:wrap}.firefly-tools{gap:6px;font-size:11px}
+ .firefly-world{padding-bottom:max(18px,env(safe-area-inset-bottom))}
+}
+@media(prefers-reduced-motion:reduce){.firefly-body,.memory-jar-lights i{animation:none!important}#home .actor-slot.slow .actor .memory-cork{transition:none}}

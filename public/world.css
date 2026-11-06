@@ -1,0 +1,57 @@
+#home .meadow .landscape{background-size:100% 111%;background-position:center 23%;filter:saturate(.91)}
+#home .meadow .landscape::before{content:"";position:absolute;inset:auto 0 0;height:12%;background:linear-gradient(transparent,#e2efce99);pointer-events:none}
+.world-prop{position:absolute;width:clamp(34px,6vw,66px);padding:1px;border:0;background:transparent!important;box-shadow:none;z-index:2;transform-origin:50% 85%;filter:drop-shadow(0 3px 3px #466e533b)}
+.world-prop svg{display:block;width:100%;height:auto}
+.world-prop[data-prop="door"]{left:47%;top:36%;width:clamp(30px,4.5vw,49px)}
+.world-prop[data-prop="flowers"]{left:30%;top:78%}
+.world-prop[data-prop="cloud"]{left:76%;top:12%}
+.world-prop[data-prop="pond"]{left:67%;top:76%;width:clamp(53px,8vw,93px)}
+.world-prop[data-prop="balloons"]{left:58%;top:34%}
+.world-prop[data-prop="camera"]{left:82%;top:78%}
+.world-prop:hover svg{translate:0 -2px}
+#doorGuest{position:absolute;left:47%;top:28%;width:44px;height:46px;object-fit:cover;object-position:center 70%;border-radius:12px;z-index:3;pointer-events:none}
+#worldRipple{position:absolute;width:22px;height:22px;border:2px solid #fffdf0;border-radius:50%;translate:-50% -50%;pointer-events:none;z-index:1}
+#home .actor-slot.facing-left .actor img{scale:-1 1}
+#home .actor-slot[data-behavior="walking"] img{animation:world-step .29s ease-in-out infinite alternate}
+@keyframes world-step{to{rotate:2deg;translate:0 -3px}}
+#home .speech-options button{font-size:.72rem}
+#home .speech-options{display:flex;gap:4px;justify-content:center;flex-wrap:wrap}
+#home footer select{width:auto;padding:3px 6px;font-size:.73rem;background:#f8fdff80;border-radius:8px}
+.photo-set{padding:14px;margin-top:12px;border:6px solid #fffdf6;background:linear-gradient(#d4effa,#e8efcd);border-radius:13px;text-align:center}
+.photo-cast{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px;margin-top:10px}
+.photo-cast figure{margin:0;font-size:.77rem;animation:world-photo-in .45s both}
+.photo-cast img{width:min(100%,96px);aspect-ratio:1;object-fit:cover;object-position:center 76%;border-radius:13px}
+.photo-set.developed img{display:block;width:100%;animation:world-photo-in .65s both}
+@keyframes world-photo-in{from{opacity:.15;transform:translateY(5px);filter:brightness(1.5)}}
+@media(max-width:650px){
+ #home .meadow .landscape::after{inset:0 28% auto;height:108px}
+ .world-prop[data-prop="door"]{top:15%;left:46%}
+ .world-prop[data-prop="flowers"]{left:6%;top:47%}
+ .world-prop[data-prop="pond"]{left:58%;top:51%}
+ .world-prop[data-prop="balloons"]{left:16%;top:10%}
+ .world-prop[data-prop="camera"]{left:82%;top:46%}
+ #doorGuest{left:46%;top:6%}
+ #home footer span{display:none}
+}
+#home .meadow .landscape{background-image:url(/assets/explore.svg)}
+/* Extend the landscape behind the controls while retaining the sky above. */
+#home{isolation:isolate;background:linear-gradient(transparent 68%,#bad6a3 100%)}
+#home .meadow{width:100%;max-width:none}
+#home .meadow .landscape{background-size:100% 116%;background-position:center top}
+#home .meadow .landscape::before{display:block;inset:auto 0 0;height:13%;background:linear-gradient(transparent,#bad6a3)}
+#home footer{background:#bad6a3}
+#home .village-status{background:#bad6a3}
+@media(min-width:651px){
+ #home .cast{width:min(100%,1580px);margin-inline:auto;grid-template-columns:repeat(24,minmax(0,1fr));padding:0 4% 6cqh}
+ #home .actor-slot.warm{grid-area:4/2/8/6}
+ #home .actor-slot.sheep{grid-area:6/6/11/10}
+ #home .actor-slot.lazy{grid-area:8/11/12/15}
+ #home .actor-slot.mei{grid-area:6/16/10/20}
+ #home .actor-slot.slow{grid-area:4/20/8/24}
+ #home .actor-slot.wolf{grid-area:7/21/12/25}
+ #home .actor img{max-height:min(200px,29cqh)}
+ #home .world-prop[data-prop="cloud"]{left:70%;top:15%}
+ #home .world-prop[data-prop="camera"]{left:89%;top:87%}
+ #home .world-prop[data-prop="pond"]{left:70%;top:84%}
+ #home .world-prop[data-prop="flowers"]{left:28%;top:85%}
+}

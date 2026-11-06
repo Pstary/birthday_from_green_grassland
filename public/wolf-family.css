@@ -1,0 +1,20 @@
+#home .wish-grove{pointer-events:none}
+#home #wishTree{pointer-events:none;outline:none!important;border:0!important;background:none!important;box-shadow:none!important}
+#home .wish-grove::before,#home .wish-grove::after{display:none}
+#home #treeCount{display:none}
+#home .scene-stars{display:block;inset:0 3%;height:80%;pointer-events:none}
+#home .branch-star{position:absolute;left:var(--branch-x);top:var(--branch-y);width:36px;height:36px;translate:-50% -50%;pointer-events:none}
+#home .branch-star button{display:grid;place-items:center;width:36px;height:36px;min-width:36px;border:0;background:none!important;box-shadow:none;padding:0;pointer-events:auto;font-size:26px;color:#fff5ca;text-shadow:0 1px 4px #75612a,0 0 5px #f9e39e}
+#home .branch-star button:is(:hover,:focus-visible){outline:1px dashed #fff3bf;border-radius:50%;scale:1.13}
+#home .branch-star button.lit{color:#ffe17a;text-shadow:0 0 10px #ffd77e}
+.wolf-family{position:absolute;z-index:2;transform:translate(-50%,-100%);display:flex;align-items:end;gap:0;pointer-events:none;width:clamp(120px,14vw,228px)}
+.wolf-family img{width:65%;height:auto;filter:drop-shadow(0 5px 2px #40552a36)}
+.wolf-family img+img{width:42%;margin-left:-8%}
+@media(max-width:650px){.wolf-family{width:135px}}
+.wolf-family{width:clamp(126px,13vw,194px);gap:2px}
+.wolf-family img{width:55%;margin:0}
+.wolf-family img+img{width:42%;margin-left:-2%}
+#home .wolf-family{display:block;width:calc(var(--wolf-height,150px)*.68);height:var(--wolf-height,150px);gap:0;z-index:3}
+#home .wolf-family img:first-child{display:block;width:100%;height:100%;object-fit:contain;object-position:center bottom;margin:0}
+#home .wolf-family img+img{position:absolute;width:65%;height:55%;object-fit:contain;left:-58%;bottom:-7%;margin:0}
+#home .wolf-family img:first-child{transform:scaleX(-1);transform-origin:center bottom}

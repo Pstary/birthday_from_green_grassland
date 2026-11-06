@@ -1,0 +1,79 @@
+#intro{min-height:calc(100svh - 80px);padding:20px 14px 28px;overflow:clip;isolation:isolate}
+body:has(#intro:not([hidden])) .sky .balloon,body:has(#intro:not([hidden])) .sky .bubble{display:none}
+body:has(#intro:not([hidden])) header{padding-block:10px}
+.parcel-title h1{font-family:"KaiTi","STKaiti","Microsoft YaHei",serif;font-size:clamp(1.45rem,4.4vw,2.65rem);font-weight:600;margin:10px 0 2px;letter-spacing:.05em}
+.parcel-title p,.parcel-caption{font-size:.88rem;color:#466986}
+.parcel-stage{width:min(100%,470px);height:clamp(246px,47vh,385px);position:relative;display:grid;place-items:center;margin-top:9px}
+#gift{width:100%;height:100%;margin:0;animation:none}
+#gift .box{bottom:17%;height:41%;border-radius:14px;background:linear-gradient(90deg,transparent 41%,#fffdf4 41% 59%,transparent 59%),repeating-linear-gradient(135deg,#b5dff5 0 4px,#c5e8f8 4px 9px)}
+#gift .box small{position:absolute;right:9%;bottom:13%;border:1px dashed #739db7;border-radius:4px;padding:3px;rotate:-8deg;font-size:clamp(.55rem,2vw,.75rem)}
+#gift .lid{bottom:53%;height:14%}
+#gift .giftcloud{bottom:7%;height:19%}
+#gift .bow{scale:1.25}
+#gift:not(.opening):is(:hover,:focus-visible){rotate:-2deg;transition:rotate .2s}
+#gift:not(.opening):is(:hover,:focus-visible) .bow{filter:drop-shadow(0 0 9px #fff);animation:bow-wiggle .6s both}
+.parcel-hint{position:absolute;top:0;z-index:3;background:#fffdf4;border:1px solid #aacbdc;padding:7px 12px;border-radius:13px;font-size:.82rem;opacity:0;transform:translateY(6px);transition:opacity .2s,transform .2s;pointer-events:none}
+.parcel-stage:has(#gift:is(:hover,:focus-visible)) .parcel-hint,[data-scene="giftFirstClick"] .parcel-hint{opacity:1;transform:none}
+[data-scene="giftFirstClick"] #gift{animation:shake .46s both}
+#gift.opening{animation:shake .65s both}
+.ears{position:absolute;z-index:2;left:65%;bottom:63%;width:72px;height:62px;display:flex;gap:6px;justify-content:center;background:transparent!important;border:0;box-shadow:none;padding:0;animation:ear-pop .55s both}
+.ears i{display:block;width:24px;height:52px;border-radius:62% 58% 32% 34%;background:#fff7ef;border:2px solid #a795a8;rotate:-23deg;box-shadow:inset 0 5px 0 #f6d6e4}
+.ears i+i{rotate:19deg;translate:0 6px}
+.parcel-caption{margin:0}
+#intro:is([data-scene="invitationReveal"],[data-scene="invitationReading"],[data-scene="characterEntrance"],[data-scene="characterDialogue"],[data-scene="readyToEnter"],[data-scene="transitionToWorld"]) :is(.parcel-title,.parcel-stage,.parcel-caption){display:none}
+#intro:is([data-scene="invitationReveal"],[data-scene="invitationReading"],[data-scene="characterEntrance"])::before{content:"";position:absolute;inset:0;z-index:-1;background:#3c68982b;animation:paper-dim .6s both}
+.invitation{position:relative;width:min(100%,570px);text-align:left;padding:clamp(18px,4vw,34px);padding-top:32px;border-radius:8px 15px 11px 7px;border:1px solid #9bbdd2;box-shadow:0 18px 55px #28598240,inset 0 0 0 7px #fffdfa;overflow:hidden;background:radial-gradient(ellipse at 86% 18%,#d9edf788,transparent 33%),repeating-linear-gradient(0deg,#fffdf7 0 4px,#fffaf1 4px 5px);animation:paper-rise .78s both}
+.invitation h2{font-family:"KaiTi","STKaiti","Microsoft YaHei",serif;font-size:clamp(1.3rem,4.5vw,2rem);margin-top:9px}
+.wax{position:absolute;right:18px;top:13px;width:34px;height:34px;display:grid;place-items:center;border:3px double #eab1b9;border-radius:46%;background:#ad6176;color:#fff7ef;rotate:11deg;font-family:serif}
+.invitation .eyebrow{display:block;padding-right:32px;letter-spacing:.15em;font-size:.64rem}
+.name-tag{font-size:.76rem;color:#4b7797;border-bottom:1px dashed #bed5df;padding-bottom:5px;margin:0}
+.letter-body p{margin:.55em 0;line-height:1.62;font-size:.92rem;animation:paper-text .45s both}
+.letter-body p:nth-child(2){animation-delay:.1s}.letter-body p:nth-child(3){animation-delay:.18s}.letter-body p:nth-child(4){animation-delay:.25s}
+.letter-body .signature{font-family:"KaiTi",serif;font-size:1rem;text-align:right;padding-right:80px}
+.letter-art{position:absolute;right:18px;bottom:65px;width:70px;height:77px;object-fit:cover;clip-path:ellipse(47% 49% at 50% 51%);pointer-events:none}
+.letter-actions{display:flex;gap:8px;flex-wrap:wrap;padding-right:70px;margin-top:14px}
+.letter-actions button,.greeting-actions button{border-radius:9px}
+#secretNote{margin:12px 0 0;padding:6px 10px;border-left:2px solid #d4ad75;background:#fff5dd;font-size:.83rem}
+[data-scene="characterEntrance"] .invitation{position:absolute;pointer-events:none;animation:paper-away .48s both;z-index:5}
+.greeting-stage{width:min(100%,560px);position:relative}
+.greeting-cast{position:relative;display:flex;align-items:end;justify-content:center;gap:clamp(12px,7vw,63px);height:clamp(160px,34vh,300px);margin-top:6px}
+.greeter{position:relative;z-index:1;width:min(39%,190px);transform-origin:50% 95%;animation:greeter-entry .95s cubic-bezier(.21,.75,.34,1) both}
+.greeter img{display:block;width:100%;max-height:245px;object-fit:contain}
+.greeting-sheep{--from:-55vw}.greeting-wolf{--from:55vw;animation-delay:.13s}
+.greeting-cloud{position:absolute;bottom:0;width:83%;height:23%;z-index:0}
+.greeting-copy{position:relative;width:min(100%,390px);margin:8px auto 10px;text-align:left;border:1px solid #a7cddd;border-radius:12px 17px 12px 8px;padding:9px 16px;background:#fffdf4;box-shadow:0 7px 14px #568ba721}
+.greeting-copy p{margin:2px 0;font-size:.91rem}
+.greeting-actions{justify-content:center}
+[data-speaker="sheep"] .greeting-sheep img,[data-speaker="wolf"] .greeting-wolf img{animation:greeter-breath 3.8s ease-in-out infinite}
+[data-scene="transitionToWorld"] .greeter{animation:greeter-away .56s ease-in both}
+[data-scene="transitionToWorld"] .greeting-wolf{animation-delay:.1s}
+#veil.cover{background:radial-gradient(ellipse at 25% 60%,#fff 0 24%,transparent 60%),radial-gradient(ellipse at 80% 40%,#fff 0 32%,#f3fbff 75%);animation:cloud-cross 1s both}
+@keyframes bow-wiggle{40%{rotate:10deg}75%{rotate:-6deg}}
+@keyframes ear-pop{from{translate:0 34px;opacity:0}70%{translate:0 -6px}}
+@keyframes paper-rise{0%{opacity:0;transform:translateY(105px) rotate(-8deg) scale(.64);clip-path:inset(32% 0 32% 0)}100%{opacity:1;transform:none;clip-path:inset(0)}}
+@keyframes paper-text{from{opacity:0;translate:0 5px}}
+@keyframes paper-dim{from{opacity:0}}
+@keyframes paper-away{to{transform:translateY(60px) rotate(7deg) scale(.67);opacity:0}}
+@keyframes greeter-entry{0%{transform:translate(var(--from),35px) rotate(-9deg);opacity:0}65%{transform:translateY(-13px) rotate(4deg)}100%{transform:none}}
+@keyframes greeter-breath{50%{transform:rotate(-2deg) translateY(-3px)}}
+@keyframes greeter-away{to{transform:translateY(-22px) scale(1.25);opacity:0}}
+@keyframes cloud-cross{0%,100%{opacity:0}48%,63%{opacity:1}}
+@media(max-width:460px){#intro{justify-content:center}.parcel-stage{height:clamp(235px,42vh,330px)}.letter-actions{padding-right:0}.letter-art{width:57px;height:61px;bottom:68px}.invitation .letter-body p{font-size:.84rem}.greeting-cast{height:200px}}
+.greeting-sheep img{clip-path:polygon(5% 48%,11% 45%,12% 40%,11% 34%,13% 31%,20% 28%,31% 28%,34% 29%,40% 25%,50% 23%,59% 24%,66% 26%,69% 24%,76% 25%,77% 29%,85% 29%,91% 31%,91% 35%,87% 40%,91% 45%,94% 49%,91% 51%,92% 58%,89% 65%,89% 71%,86% 75%,83% 78%,83% 83%,77% 87%,74% 92%,67% 97%,55% 100%,45% 99%,31% 96%,25% 90%,22% 85%,17% 83%,12% 78%,11% 74%,12% 70%,9% 63%,8% 54%,5% 50%)}
+.greeting-wolf img{clip-path:polygon(11% 56%,18% 42%,15% 20%,20% 18%,32% 21%,45% 13%,62% 8%,70% 10%,77% 20%,89% 18%,92% 20%,87% 36%,84% 42%,91% 53%,88% 63%,90% 74%,82% 86%,74% 88%,76% 100%,33% 100%,23% 97%,13% 89%,12% 83%,19% 75%,24% 84%,38% 77%,24% 69%,13% 63%)}
+.ears{width:88px;height:32px;bottom:68%;background:none!important}
+.ears i{display:none}
+.ears::before{content:"";width:100%;height:100%;background:url('/assets/parcel-sheep.jpg') center top/108% auto no-repeat;clip-path:polygon(6% 100%,8% 67%,10% 53%,14% 49%,20% 55%,27% 48%,32% 44%,34% 34%,39% 26%,41% 15%,47% 4%,49% 3%,54% 11%,56% 18%,56% 25%,61% 29%,63% 41%,69% 41%,75% 45%,78% 52%,84% 48%,89% 50%,93% 57%,94% 69%,92% 86%,95% 100%)}
+.ears{left:74%;bottom:29%;width:clamp(42px,12vw,65px);height:clamp(65px,17vw,94px);rotate:13deg;z-index:0;justify-content:flex-start}
+#gift{z-index:1;pointer-events:none}
+#gift :is(.box,.lid,.bow,.giftcloud){pointer-events:auto}
+.ears::before{background-size:auto 145%;background-position:91% 0;clip-path:polygon(0 0,20% 2%,33% 14%,43% 17%,55% 26%,74% 25%,89% 32%,86% 45%,97% 57%,96% 68%,100% 73%,88% 81%,82% 91%,69% 100%,0 100%)}
+.ears{left:75%;bottom:26%;width:clamp(51px,16vw,83px);height:auto;aspect-ratio:1280/2170;rotate:9deg}
+.ears::before{position:absolute;inset:0;background:url('/assets/parcel-peek.jpg') right 38%/160% auto no-repeat;clip-path:polygon(0 10%,18% 9%,30% 2%,41% 3%,50% 9%,52% 16%,60% 20%,66% 25%,86% 23%,94% 26%,93% 32%,85% 36%,88% 43%,88% 49%,96% 54%,100% 61%,96% 68%,93% 74%,87% 80%,79% 85%,67% 91%,46% 95%,21% 94%,17% 100%,0 100%)}
+#intro #ears {width:clamp(51px,16vw,83px);aspect-ratio:1;rotate:0deg;}
+#intro #ears::before {
+  background:url('/assets/lazy-gift-portrait.svg') center bottom / contain no-repeat;
+  clip-path:none;
+  filter:drop-shadow(0 2px 2px #64503238);
+}
+

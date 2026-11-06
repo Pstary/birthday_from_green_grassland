@@ -1,0 +1,16 @@
+# Private data and local credentials
+*.sqlite*
+*.db
+*.db-*
+*.db.*
+/owner-password.txt
+.env
+.env.*
+!.env.example
+
+# Dependencies and generated files
+node_modules/
+*.log
+*.tar.gz
+.DS_Store
+Thumbs.db

@@ -1,0 +1,190 @@
+#dialog[data-world=voice]{width:min(74vw,1060px);max-width:96vw;max-height:86dvh;border:0;padding:0;background:transparent;box-shadow:none;overflow:visible;color:#557879}#dialog[data-world=voice]::backdrop{background:#36594426;backdrop-filter:blur(1.5px)}#dialog[data-world=voice] #close{position:absolute;right:0;top:0;z-index:30;border:1px solid #d5c39e;border-radius:50%;background:#fff9e9;color:#7d8b79}
+.starlight-hall{position:relative;isolation:isolate;width:100%;aspect-ratio:1.5;background:url('/garden-voice-furniture.png') center/100% 100% no-repeat;filter:drop-shadow(0 15px 12px #3a55413b);font-family:KaiTi,STKaiti,serif}.voice-stage{position:absolute;inset:0}.magic-gramophone{position:absolute;left:0;top:0;width:65%;height:100%}.magic-gramophone svg{width:100%;visibility:hidden}.gramophone-name{position:absolute;left:18%;right:15%;top:73%;margin:0;text-align:center;font:normal clamp(12px,1.65vw,23px)/1.5 KaiTi,serif;color:#567d84;letter-spacing:1px;text-shadow:0 1px 1px #fff9dc}.platter{position:absolute;left:22%;top:55%;width:49%;height:8%;z-index:4}.magic-disc{display:grid;place-items:center;position:relative;box-sizing:border-box;width:82px;height:82px;border:1px solid #6e8791;border-radius:50%;background:repeating-radial-gradient(ellipse,#263c49 0 2px,#53626d 3px,#30414e 4px);box-shadow:2px 4px 3px #24384466}.magic-disc b{display:grid;place-items:center;width:34%;height:34%;border:2px solid #f0e1bb;border-radius:50%;background:var(--disc-color,#a8c8d2);color:#fff5d8;font:18px Georgia,serif}.magic-disc b:after{content:'';position:absolute;width:4px;height:4px;border-radius:50%;background:#f7e7c1}.platter .magic-disc{width:100%;height:100%}.voice-playing .platter b{animation:vinyl-spin 3s linear infinite}.tonearm{position:absolute;top:56%;left:66%;width:19%;height:4px;background:linear-gradient(#edddb5,#9a8155);border:1px solid #c8b080;transform-origin:right;transform:rotate(-45deg);transition:transform .4s;z-index:5}.tonearm:before{content:'';position:absolute;left:0;top:-3px;width:14px;height:10px;border-radius:3px;background:#9b8d70}.needle-down .tonearm{transform:rotate(-9deg)}.record-cabinet{position:absolute;left:67%;right:1%;top:47%;height:40%;background:none;border:0;padding:0}.voice-slots{position:absolute;left:0;right:3%;top:0;height:65%;perspective:700px;touch-action:pan-y}.voice-slot{position:absolute;left:calc(var(--arc)*12%);top:calc(25% + var(--lift));width:38%;height:100%;z-index:calc(10 - var(--arc))}.slot-front{position:absolute;inset:0;border:0;background:none;box-shadow:none;padding:0;display:flex;align-items:center;flex-direction:column;transition:translate .25s;cursor:pointer}.slot-front .magic-disc{width:100%;height:auto;aspect-ratio:1;transform:rotateY(-48deg) rotate(-8deg);box-shadow:3px 2px 0 #1c303b}.slot-front span{margin-top:3px;max-width:100%;font:11px KaiTi,serif;color:#536c70;background:#fff6e5e8;padding:2px 5px;border-radius:7px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.slot-front:hover,.slot-front:focus-visible{translate:0 -18px;z-index:20}.voice-slot:has(.slot-front:hover),.voice-slot:focus-within{z-index:25}.empty-record{display:grid;place-content:center;text-align:center;color:#899f96;font-size:20px;opacity:.6}.empty-record small{font:9px KaiTi,serif}.arc-pagination{position:absolute;top:85%;left:0;right:0;display:flex;justify-content:center;align-items:center;gap:12px;color:#6b807b;font-size:12px}.arc-pagination button{width:27px;height:27px;padding:0;border:2px double #c7b382;border-radius:50%;background:#fcf0d3;color:#728988;font-size:22px;box-shadow:0 2px 0 #a38e6050}.arc-pagination button:disabled{opacity:.35}#voiceTag{position:absolute;top:109%;left:-15%;right:-3%;text-align:center;font:12px/1.5 KaiTi,serif;color:#5b756e;text-shadow:0 1px 3px #fff;min-height:32px}.voice-controls{position:absolute;top:89%;left:15%;right:10%;display:flex;align-items:center;justify-content:center;gap:8px;padding:6px 10px;border:2px double #c9b88f;border-radius:16px;background:linear-gradient(#fbf4df,#d9e8e3);box-shadow:0 3px 0 #8daca255;color:#637b7b;font:11px Georgia,serif;flex-wrap:wrap}.voice-controls button{width:30px;height:30px;border:2px double #baa06d;border-radius:50%;background:radial-gradient(circle at 35% 30%,#fff3cf,#c8ad76);padding:0;color:#7e704a}.starlight-hall .voice-controls select{width:auto;min-width:52px;margin:0;background:#fdf6e4;color:#667e80;border:1px solid #b8bba1;border-radius:50%;padding:4px;font-size:11px}.voice-controls input{order:5;width:100%;min-width:0;height:8px;margin:0;accent-color:#81aab4}.voice-controls a{color:#6b8a8d;font:12px KaiTi,serif}.magic-mic{position:absolute;top:80%;left:28%;z-index:10;display:flex;align-items:center;gap:4px;width:54px;height:26px;border:2px solid #bfa46d;border-radius:6px;padding:3px;background:#eef0dd;box-shadow:inset 0 2px 4px #657c6c44}.magic-mic span{font:8px Georgia,serif;color:#8b7952}.magic-mic i{position:relative;display:block;width:22px;height:9px;background:#536c6d;border-radius:8px}.magic-mic i:after{content:'';position:absolute;left:0;top:-4px;width:10px;height:16px;background:linear-gradient(90deg,#ae955f,#fff0bc,#bea36e);border-radius:3px;transition:translate .16s;box-shadow:1px 2px 2px #46594b55}.voice-recording .magic-mic i:after{translate:12px 0}.body-soundwave{position:absolute;top:67%;left:37%;display:flex;align-items:center;gap:5px;height:26px;opacity:0}.body-soundwave i{height:8px;width:3px;border-radius:3px;background:#a8c9c7}.voice-recording .body-soundwave{opacity:1}.voice-recording .body-soundwave i{animation:garden-wave .7s infinite alternate}.body-soundwave i:nth-child(2n){animation-delay:-.3s}.body-soundwave i:nth-child(3n){animation-delay:-.5s}.music-sparks{position:absolute;top:20%;left:7%;font:26px Georgia,serif;color:#f5dba6;text-shadow:0 0 5px #fff3ce;opacity:0;pointer-events:none}.voice-playing .music-sparks{animation:garden-notes 3s infinite}.flying-record{position:absolute;left:0;top:0;z-index:30;pointer-events:none;filter:drop-shadow(0 0 8px #fff0bc)}#voiceStatus{position:absolute;left:0;right:0;bottom:-10%;margin:0;text-align:center;font:13px/1.5 KaiTi,serif;color:#5f776c;text-shadow:0 1px 3px #fff}.starlight-hall #voiceStudio{position:absolute;z-index:20;left:64%;right:0;top:9%;box-sizing:border-box;padding:18px;background:linear-gradient(120deg,#fdf5df,#e0eeea);border:3px double #c1b68e;border-radius:22px 7px 22px 7px;box-shadow:0 10px 24px #4f706443;color:#657f7a}.starlight-hall #voiceStudio[hidden]{display:none}#voiceStudio h3{font:20px KaiTi,serif;margin:0 0 14px;text-align:center}.studio-actions{display:flex;flex-wrap:wrap;gap:7px;justify-content:center}.starlight-hall #voiceStudio button{padding:7px;font:12px KaiTi,serif;color:#6d7b68;border:1px solid #c6b68e;border-radius:10px;background:#faf0d6;box-shadow:none}.starlight-hall #voiceStudio button:disabled{opacity:.4}#voiceStudio input{box-sizing:border-box;width:100%;margin:14px 0;padding:8px;border:0;border-bottom:1px solid #bdc6b0;background:#fffbef;color:#5b7776}.voice-wave{height:20px;width:70px;margin:15px auto;border:2px solid #aecbc8;border-radius:50%;box-shadow:0 0 0 5px #a9c8c333;transform:scale(var(--level,1));transition:transform .08s}@keyframes vinyl-spin{to{rotate:360deg}}@keyframes garden-wave{to{height:25px}}@keyframes garden-notes{0%,100%{opacity:0;translate:0 8px}50%{opacity:1;translate:0 -12px}}
+@media(max-width:650px){#dialog[data-world=voice]{width:96vw}.starlight-hall{aspect-ratio:1.35}.gramophone-name{font-size:11px;letter-spacing:0}.slot-front span{font-size:7px;padding:1px 2px}.voice-slot{top:calc(25% + var(--lift)/2)}.empty-record{font-size:12px}.empty-record small{display:none}.arc-pagination{gap:4px;font-size:8px}.arc-pagination button{width:23px;height:23px;font-size:18px}.voice-controls{left:5%;right:0;gap:4px;padding:5px;font-size:8px}.voice-controls button{width:23px;height:23px}.starlight-hall .voice-controls select{font-size:9px;min-width:40px;padding:2px}.voice-controls a{font-size:9px}.magic-mic{width:42px;height:23px;padding:2px;left:26%}.magic-mic span{font-size:6px}.magic-mic i{width:20px}#voiceTag{font-size:8px;top:115%}#voiceStatus{font-size:10px;bottom:-20%}.starlight-hall #voiceStudio{left:5%;right:5%;top:106%;max-height:35dvh;overflow:auto;padding:15px}.flying-record .magic-disc{width:64px;height:64px}}
+@media(prefers-reduced-motion:reduce){.starlight-hall *{animation:none!important;transition:none!important}}
+.magic-gramophone{width:60%}.gramophone-name{top:73%;left:34%;right:25%;font-size:clamp(11px,1.5vw,21px);letter-spacing:0}.platter{top:53%;left:25%;width:58%;height:8%}.tonearm{top:52%;left:68%;width:19%}.magic-mic{top:85%;left:52%;background:transparent;border:0;box-shadow:none;width:35px;height:35px}.magic-mic span{display:none}.magic-mic i{background:transparent}.magic-mic i:after{width:8px;height:22px;top:-12px;rotate:18deg}.voice-recording .magic-mic i:after{translate:0 5px;rotate:-20deg}.record-cabinet{left:65%;right:2%;top:61%;height:28%}.voice-slot{top:calc(10% + var(--arc)*4px)}.arc-pagination{top:112%}#voiceTag{top:143%}.voice-controls{top:100%;left:20%;right:7%}.starlight-hall #voiceStatus{bottom:-22%}@media(max-width:650px){.gramophone-name{font-size:9px}.magic-mic{left:52%;top:85%;width:25px;height:25px}.voice-slot{top:calc(10% + var(--arc)*2px)}.voice-controls{top:100%;left:6%;right:0}.starlight-hall #voiceStudio{top:120%}.arc-pagination{top:119%}#voiceTag{top:161%;font-size:7px}}
+/* Selected garden cabinet silhouette, with a balanced painted palette. */
+.starlight-hall{background-image:url('/starlight-garden-recolor.svg')}.magic-gramophone{width:40%}.record-cabinet{left:40%;right:2%;top:20%;height:70%}.record-cabinet h3{position:absolute;top:0;left:12%;right:12%;text-align:center;margin:0;font:normal clamp(12px,1.8vw,24px)/1.5 KaiTi,serif;color:#617f82;letter-spacing:1px;text-shadow:0 1px 1px #fff6dd}.voice-slots{left:7%;right:5%;top:23%;height:auto;bottom:8%;display:grid;grid-template-columns:repeat(3,minmax(0,1fr));grid-template-rows:repeat(2,minmax(0,1fr));gap:9% 5%;perspective:none}.voice-slot{position:relative;left:auto;top:auto;width:auto;height:auto;z-index:auto}.slot-front{justify-content:center}.slot-front .magic-disc{width:65%;max-width:90px;transform:rotate(-7deg)}.slot-front span{font-size:11px}.empty-record{height:100%;opacity:.6;color:#b4986d}.empty-record small{color:#9c805d}.platter{top:51%;left:28%;width:57%;height:7%}.tonearm{top:52%;left:72%;width:17%}.magic-mic{top:78%;left:38%;width:54px;height:26px;border:2px solid #bfa46d;background:#eef0dd;box-shadow:inset 0 2px 4px #657c6c44}.magic-mic span{display:block}.magic-mic i{background:#536c6d}.magic-mic i:after{width:10px;height:16px;top:-4px;rotate:0deg}.voice-recording .magic-mic i:after{translate:12px 0;rotate:0deg}.voice-controls{top:96%;left:6%;right:0}.arc-pagination{top:103%;font-size:11px}#voiceTag{top:113%;left:0;right:0}.starlight-hall #voiceStatus{bottom:-20%}.starlight-hall #voiceStudio{left:45%;top:7%;right:0}.music-sparks{top:20%}@media(max-width:650px){.record-cabinet h3{font-size:12px;letter-spacing:0}.voice-slot{top:auto}.slot-front .magic-disc{width:70%}.slot-front span{font-size:7px}.empty-record small{display:block;font-size:6px}.magic-mic{top:78%;left:36%;width:42px;height:23px}.arc-pagination{top:104%;font-size:8px}#voiceTag{top:118%;font-size:8px}.voice-controls{left:3%;right:0}.starlight-hall #voiceStudio{left:5%;right:5%;top:120%}}
+/* Recording belongs to the instrument; only the finished record gets a label. */
+.starlight-hall #voiceStudio.record-label{position:absolute;left:24%;right:auto;top:57%;width:25%;min-width:200px;max-width:290px;box-sizing:border-box;padding:18px 20px 14px;border:1px solid #c4b68d;border-radius:12px 25px 15px 3px;background:radial-gradient(ellipse at top left,#b5d1ce55,transparent 70%),repeating-linear-gradient(3deg,#a18b6107 0 1px,transparent 1px 4px),#f7edd5;box-shadow:1px 3px 0 #d5c8aa,0 10px 20px #4a625447;transform-origin:left bottom;animation:label-unfold .45s ease both;color:#5b7b7d;z-index:18}.record-label:before{content:'';position:absolute;inset:6px;border:1px solid #baa47477;border-radius:9px 20px 10px 2px;pointer-events:none}.record-label:after{content:'♪';position:absolute;right:12px;top:9px;font:28px Georgia,serif;color:#c6ad7a66;pointer-events:none}.label-kicker{display:block;font:9px KaiTi,serif;letter-spacing:2px;color:#a18b61}.starlight-hall #voiceStudio h3{font:18px/1.6 KaiTi,serif;margin:8px 0 10px;text-align:left}.label-signature{display:flex;align-items:center;gap:8px;font-size:12px}.starlight-hall #voiceStudio input{width:100%;min-width:0;margin:0;padding:5px 0;border:0;border-bottom:1px solid #a4b5a599;background:transparent;border-radius:0;box-shadow:none;font:15px/1.6 KaiTi,serif;color:#59767b}.label-tools{display:flex;justify-content:space-between;margin-top:15px;gap:10px}.starlight-hall #voiceStudio .label-tools button{display:grid;place-items:center;width:31px;height:31px;padding:0;border:1px solid #b4a475;border-radius:50%;background:radial-gradient(circle at 30% 20%,#fff8de,#d6d9be);box-shadow:0 2px 0 #a7a28255;color:#608184;font:23px/1 Georgia,serif}.starlight-hall #voiceStudio .label-tools button:hover{translate:0 -2px;filter:brightness(1.06)}.starlight-hall #voiceStudio #voiceSave{background:radial-gradient(circle at 30% 20%,#e9f3df,#a9c5bc)}.voice-recording .platter b{animation:vinyl-spin 6s linear infinite}.magic-mic:after{content:'';position:absolute;right:-10px;top:7px;width:6px;height:6px;background:#8a8270;border:1px solid #c2ab78;border-radius:50%;transition:background .2s,box-shadow .2s}.voice-recording .magic-mic:after{background:#da8a7f;box-shadow:0 0 8px #f0a294}.voice-recording .music-sparks{opacity:.8;color:#c0d8cd;animation:garden-notes 2.2s infinite}.voice-recording .body-soundwave{top:30%;left:43%;transform:scaleY(var(--level,1));transition:transform .08s}.record-label[hidden]{display:none!important}@keyframes label-unfold{from{opacity:0;transform:translate(-20px,10px) rotate(-8deg) scale(.6)}to{opacity:1;transform:none}}@media(max-width:650px){.starlight-hall #voiceStudio.record-label{left:17%;right:auto;top:61%;width:58%;min-width:0;padding:13px 16px;max-height:40dvh;overflow:auto}.starlight-hall #voiceStudio h3{font-size:16px;margin:5px 0}.label-tools{margin-top:10px}.label-kicker{font-size:8px}.voice-recording .body-soundwave{left:43%;top:30%}}
+/* Cabinet-sized stage and a true circular record projected onto the platter. */
+#dialog[data-world=voice]{width:min(68vw,960px,106dvh);max-height:78dvh}.starlight-hall{aspect-ratio:1.5}.platter{top:50.8%;left:28%;width:57%;height:7%}.platter .magic-disc{width:100%;height:auto;aspect-ratio:1;transform:scaleY(.307);transform-origin:center top;animation:vinyl-spin 4s linear infinite;animation-play-state:paused}.platter .magic-disc b{animation:none}.voice-playing .platter .magic-disc,.voice-recording .platter .magic-disc{animation:projected-vinyl 4s linear infinite}.voice-playing .platter b,.voice-recording .platter b{animation:none}.flying-record{transform-origin:0 0}.flying-record .magic-disc{width:84px!important;height:84px!important;aspect-ratio:1}.disc-away .magic-disc{visibility:hidden}.disc-away span{opacity:.45}.tonearm{top:53%;left:68%;width:20%;transform:rotate(-52deg);transition:transform .4s ease;box-shadow:0 3px 2px #45544033}.needle-positioning .tonearm{transform:translateY(-8px) rotate(-18deg)}.needle-down .tonearm{transform:rotate(-18deg)}.slot-front{transition:translate .3s,filter .3s}.slot-front:hover{filter:drop-shadow(0 0 6px #fff0bb)}
+@keyframes projected-vinyl{from{transform:scaleY(.307) rotate(0)}to{transform:scaleY(.307) rotate(360deg)}}
+@media(max-width:650px){#dialog[data-world=voice]{width:min(91vw,106dvh)}.starlight-hall{aspect-ratio:1.5}}
+.platter .magic-disc{animation:projected-vinyl 4s linear infinite;animation-play-state:paused}.voice-playing .platter .magic-disc,.voice-recording .platter .magic-disc{animation-play-state:running}
+/* Project the entire round record once; rotate only within that plane. */
+.starlight-hall .platter{aspect-ratio:1;height:auto;transform:scaleY(.307);transform-origin:center top}
+.starlight-hall .platter .magic-disc{height:auto;width:100%;aspect-ratio:1;transform:none;transform-origin:50% 50%;animation:flat-record-spin 4s linear infinite!important;animation-play-state:paused!important}
+.starlight-hall.voice-playing .platter .magic-disc,.starlight-hall.voice-recording .platter .magic-disc{animation-play-state:running!important}
+.starlight-hall .platter .magic-disc b{animation:none!important;transform:none!important;rotate:none!important;aspect-ratio:1;height:auto;box-sizing:border-box}
+@keyframes flat-record-spin{from{transform:rotate(0deg)}to{transform:rotate(360deg)}}
+/* Vinyl grooves and printed, inset paper labels. */
+.starlight-hall .magic-disc{background:conic-gradient(from 20deg,#142630,#304450 14%,#12232f 24%,#52636b 27%,#1b303b 31%,#132732 65%,#455962 69%,#12242f 74%,#142630);border:1px solid #7c9196;box-shadow:0 2px 0 #111d26,0 4px 0 #263b44,3px 8px 9px #273d4166;isolation:isolate}.magic-disc:before{content:'';position:absolute;inset:4%;border-radius:50%;background:repeating-radial-gradient(circle,transparent 0 2px,#b7cad031 2.5px,transparent 3px);pointer-events:none;z-index:-1}.starlight-hall .magic-disc b{display:flex;flex-direction:column;align-items:center;justify-content:center;gap:1px;width:39%;height:39%;border:2px double #c5b28b;background:radial-gradient(circle at 30% 20%,#fffae6,var(--disc-color,#c1d8dc));box-shadow:inset 0 0 5px #8c806133;color:#5b7c82;font-weight:400}.magic-disc b em{font:normal 11px/1 Georgia,serif}.magic-disc b small{font:6px/1.3 KaiTi,serif;max-width:90%;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}.magic-disc b:after{width:3px;height:3px;bottom:40%;left:calc(50% - 1px);background:#233843}.slot-front span{display:none}.slot-front .magic-disc{transform:rotate(-8deg);width:67%}.slot-front:hover{translate:0 -9px}
+/* Compact enamel-and-brass mechanical controls on the front of the case. */
+.starlight-hall .voice-controls{position:absolute;top:82%;left:51%;right:0;width:42%;box-sizing:border-box;display:flex;align-items:center;justify-content:center;gap:4px;padding:3px 4px;background:linear-gradient(120deg,#769b99,#a9bfb1 48%,#6a9694);border:2px double #c8ae77;border-radius:12px;box-shadow:0 2px 0 #4e777355,inset 0 1px 2px #eff0c977;font-size:8px}.voice-controls button{width:23px;height:23px;font-size:10px;flex-shrink:0}.voice-controls #voiceClock{order:5;width:100%;text-align:center;font-size:7px}.voice-controls .speed-dial{font:8px Georgia,serif;border:3px double #baa06a;border-radius:50%;background:conic-gradient(#f5e7bd,#a78a50,#f5e7bd,#c3a66c)}.voice-controls a{font-size:0;width:17px;height:19px;text-align:center}.voice-controls a:after{content:'↓';font:16px Georgia,serif;color:#65756a}.voice-controls input[type=range]{appearance:none;-webkit-appearance:none;background:repeating-linear-gradient(90deg,#bb9a5c 0 1px,transparent 1px 7px),linear-gradient(#c7ad73,#ead5a4);height:5px;border:1px solid #a48651;border-radius:5px;order:6;box-shadow:inset 0 1px 2px #87683555}.voice-controls input[type=range]::-webkit-slider-thumb{appearance:none;-webkit-appearance:none;width:8px;height:12px;border:1px solid #9a814b;border-radius:3px;background:linear-gradient(90deg,#cfb477,#fff1c9,#bb9a59)}.voice-controls input[type=range]::-moz-range-thumb{width:7px;height:10px;border:1px solid #9a814b;border-radius:3px;background:#ead4a2}
+#voiceKeepsake{position:absolute;left:102%;top:15%;width:190px;box-sizing:border-box;padding:16px 17px 12px;color:#5e7b7e;background:radial-gradient(ellipse at top right,#c5dad655,transparent 70%),repeating-linear-gradient(4deg,#9a865208 0 1px,transparent 1px 4px),#faf0d9;border:3px double #a7b5a3;border-radius:4px 13px 13px 4px;box-shadow:2px 3px 0 #d5c6a7,0 8px 15px #3c59433b;transform-origin:left center;z-index:25;overflow-wrap:break-word}#voiceKeepsake:before{content:'♪';position:absolute;right:12px;top:12px;font:28px Georgia,serif;color:#c2ac7755}#voiceKeepsake>small{font:8px Georgia,serif;letter-spacing:1px;color:#a18b5d}#voiceKeepsake h4{font:17px/1.5 KaiTi,serif;margin:10px 0}#voiceKeepsake p{font:15px/1.5 KaiTi,serif;margin:0 0 7px}#voiceKeepsake time{display:block;font:11px/1.7 KaiTi,serif;color:#827352}#voiceKeepsake>div{display:flex;align-items:center;gap:12px;border-top:1px solid #bfbd9b;padding-top:9px;margin-top:11px}#voiceKeepsake button,#voiceKeepsake a{display:grid;place-items:center;box-sizing:border-box;width:24px;height:24px;padding:0;border:1px solid #b8ac86;border-radius:5px;background:linear-gradient(#f9f2de,#dce5d7);box-shadow:0 1px 0 #a5ac8d55;color:#67858a;font:18px Georgia,serif;text-decoration:none}#voiceKeepsake[hidden]{display:none}
+@media(max-width:1100px){#voiceKeepsake{left:39%;top:94%;width:220px}}@media(max-width:650px){.starlight-hall .voice-controls{top:82%;left:50%;width:47%;padding:2px;gap:3px}.voice-controls button{width:20px;height:20px}.voice-controls #voiceClock{font-size:6px}.voice-controls a{width:13px}.magic-disc b small{font-size:4px}.magic-disc b em{font-size:8px}#voiceKeepsake{left:4%;top:100%;width:230px}.arc-pagination{top:103%}.starlight-hall #voiceStatus{bottom:-27%}}
+@media(max-width:650px){#voiceKeepsake{left:-25%;right:auto;top:100%;width:205px;max-width:85vw}.starlight-hall #voiceTag{left:0;right:0}.starlight-hall .record-cabinet{overflow:visible}}
+/* Airy colored records, with no hover card backgrounds. */
+.starlight-hall .magic-disc{background:conic-gradient(from 20deg,var(--vinyl,#749da0),#e8f0e066 14%,var(--vinyl,#749da0) 25%,#fff5cf77 28%,var(--vinyl,#749da0) 34%,var(--vinyl,#749da0) 65%,#f9efd966 69%,var(--vinyl,#749da0) 75%);border-color:#d0d8bd;box-shadow:0 2px 0 #6d8587,0 3px 0 #b4bca2,2px 7px 8px #354c4540}.magic-disc:before{background:repeating-radial-gradient(circle,transparent 0 2px,#f1f1db35 2.5px,transparent 3px)}.starlight-hall .slot-front,.starlight-hall .slot-front:hover,.starlight-hall .slot-front:focus-visible{background:transparent!important;box-shadow:none!important;border:0!important}.starlight-hall .slot-front:hover{filter:drop-shadow(0 0 5px #f6e5ae66)}
+/* A small bank of hardware, without a floating panel. */
+.starlight-hall .voice-controls{top:82%;left:53%;width:42%;padding:0;gap:3px;border:0;background:none;box-shadow:none;border-radius:0}.voice-controls #voiceClock{display:none}.voice-controls input[type=range]{height:3px;border:0;background:linear-gradient(#a58c58,#e8d3a2);box-shadow:none;opacity:.8}.voice-controls input[type=range]::-webkit-slider-thumb{width:5px;height:8px}.voice-controls button{width:22px;height:22px}.voice-controls a{height:19px}.starlight-hall .platter{top:50.2%;left:29%;width:53%;transform:scaleY(.24)}.starlight-hall .tonearm{top:53%;left:69%;width:19%}
+/* A curved record sleeve, scalloped paper layers and a music seal. */
+#voiceKeepsake{width:205px;padding:24px 23px 18px;border:1px solid #c8b891;border-radius:42% 42% 8px 8px / 14% 14% 8px 8px;background:radial-gradient(ellipse at 10% 15%,#b1d2d16b,transparent 65%),radial-gradient(ellipse at 100% 90%,#e4c9b650,transparent 60%),repeating-linear-gradient(4deg,#9c8d6106 0 1px,transparent 1px 4px),#f6eed9;box-shadow:0 2px 0 #e6d9b8,0 4px 0 #b3bfa9,0 12px 18px #425c4140}#voiceKeepsake:before{content:'♫';inset:7px;right:7px;top:7px;display:block;border:1px solid #a9bca184;border-radius:40% 40% 5px 5px / 12% 12% 5px 5px;text-align:center;padding-top:3px;font:18px Georgia,serif;color:#9aa98766;pointer-events:none}#voiceKeepsake:after{content:'♪';position:absolute;right:15px;bottom:56px;display:grid;place-items:center;width:29px;height:29px;border:3px double #e0c6a2;border-radius:45%;background:#9cb8b1;color:#f7f0d9;rotate:-12deg;font:17px Georgia,serif;box-shadow:0 2px 2px #667e5a33}#voiceKeepsake>small{display:block;margin-top:10px;font-size:8px;letter-spacing:1px;text-align:center}#voiceKeepsake h4{font:19px/1.6 KaiTi,serif;color:#66858a;margin:12px 0 14px}#voiceKeepsake p{padding-right:10px}#voiceKeepsake time{font-size:11px;max-width:140px}#voiceKeepsake>div{border-top:1px solid #b6c3a566;gap:13px;padding-top:12px}#voiceKeepsake button,#voiceKeepsake a{border:0;background:none;box-shadow:none;color:#7e9b94;font-size:19px}#voiceKeepsake button:hover,#voiceKeepsake a:hover{color:#a78a55;transform:translateY(-2px)}
+@media(max-width:650px){.starlight-hall .voice-controls{left:51%;width:45%;top:82%}.voice-controls button{width:19px;height:19px}.starlight-hall .platter{top:50.2%;left:29%;width:53%}#voiceKeepsake{left:-25%;width:205px}}
+/* A cabinet-attached archive plaque: lacquer rails, parchment and brass fittings. */
+#voiceKeepsake{left:99%;top:19%;width:190px;padding:25px 18px 15px;border:4px double #b6a16f;border-radius:14px 25px 14px 4px / 8px 18px 12px 4px;background:linear-gradient(90deg,#9bb4b9 0 5px,transparent 5px calc(100% - 5px),#99b0b7 calc(100% - 5px)),radial-gradient(ellipse at 25% 0,#fdf9e9,transparent 75%),repeating-linear-gradient(5deg,#9a84590b 0 1px,transparent 1px 3px),#eee3c9;box-shadow:-5px 0 0 #a7885b,0 2px 0 #ddca9d,3px 8px 12px #3b594633;transform-origin:left center;isolation:isolate;z-index:16}#voiceKeepsake:before{content:'❧ ♫ ❧';position:absolute;left:12px;right:12px;top:5px;bottom:auto;inset:auto 12px auto 12px;height:18px;padding:0;border:0;border-bottom:1px solid #c2ad7955;border-radius:0;text-align:center;font:16px/18px Georgia,serif;color:#b29860;text-shadow:0 1px 0 #fff9df}#voiceKeepsake:after{content:'';position:absolute;left:-15px;top:22%;width:10px;height:48%;border:1px solid #a38a58;border-radius:3px;background:linear-gradient(90deg,#7a9ca3,#d4dcc7,#b2a079);box-shadow:-2px 0 0 #71878a;z-index:-1}#voiceKeepsake>small{margin:3px 0 0;font:7px/1.5 Georgia,serif;letter-spacing:.9px;color:#ac925c;text-align:center}#voiceKeepsake h4{margin:12px 0 16px;font:18px/1.5 KaiTi,serif;color:#5f7e88;text-align:center}#voiceKeepsake p{font:14px/1.8 KaiTi,serif;margin:0 0 7px;padding:0;overflow-wrap:anywhere}#voiceKeepsake time{font:11px/2 KaiTi,serif;max-width:none;color:#736b54}.plaque-field{display:inline-block;min-width:53px;font:10px/1.8 KaiTi,serif;color:#9c8c69;margin-right:6px}#voiceKeepsake>div{justify-content:space-between;gap:8px;margin-top:14px;padding-top:10px;border-top:3px double #bda46c66}#voiceKeepsake button,#voiceKeepsake a{width:25px;height:24px;padding:0;border:1px solid #b59c65;border-radius:5px;background:linear-gradient(125deg,#f5e6bc,#d8c18e 50%,#efe0b9);box-shadow:inset 0 1px 0 #fff3d0,0 2px 0 #9f8c5d55;color:#6a8182;font:16px/1 Georgia,serif}#voiceKeepsake button:hover,#voiceKeepsake a:hover{filter:brightness(1.07);transform:translateY(-1px)}
+/* Real platter ellipse is narrower than the cabinet-derived overlay. */
+.starlight-hall .platter{left:28.5%;top:49.4%;width:53%;transform:scaleY(.285)}
+@media(max-width:1250px){#voiceKeepsake{left:68%;top:83%;width:185px;z-index:25}#voiceKeepsake:after{top:-12px;left:22px;width:45%;height:8px}}
+@media(max-width:650px){#voiceKeepsake{left:0;top:101%;width:185px;max-width:85vw;padding:23px 17px 13px}#voiceKeepsake h4{font-size:17px;margin:9px 0 12px}.starlight-hall .platter{left:28.5%;top:49.4%;width:53%;transform:scaleY(.285)}}
+/* Final fit and playback accents, scoped to the existing instrument. */
+#voiceKeepsake:after{display:none!important}
+.starlight-hall .platter{left:28.5%;top:49.4%;width:57%;transform:scaleY(.265)}
+.starlight-hall .music-sparks{left:24%;top:17%;width:68%;height:28%;display:flex;align-items:center;justify-content:center;font:clamp(16px,2.2vw,30px) Georgia,serif;letter-spacing:8px;color:#f8e2b0;text-shadow:0 0 7px #fff0c8,0 0 15px #e9d6a288;opacity:0;transform:rotate(-15deg);pointer-events:none;z-index:8}
+.starlight-hall .music-sparks:before,.starlight-hall .music-sparks:after{content:'';position:absolute;left:7%;top:12%;width:75%;height:65%;border:2px solid #f9e8ba66;border-left-color:transparent;border-bottom-color:transparent;border-radius:50%;opacity:0;transform:rotate(-18deg);box-shadow:1px -1px 6px #fff2c633}
+.starlight-hall.voice-playing .music-sparks{animation:horn-melody 3.2s ease-in-out infinite}
+.starlight-hall.voice-playing .music-sparks:before{animation:horn-ripple 2.8s ease-out infinite}
+.starlight-hall.voice-playing .music-sparks:after{animation:horn-ripple 2.8s ease-out 1.4s infinite}
+@keyframes horn-melody{0%,100%{opacity:.15;translate:0 8px}45%{opacity:.95}80%{opacity:.4;translate:8px -14px}}
+@keyframes horn-ripple{0%{opacity:0;transform:rotate(-18deg) scale(.7)}25%{opacity:.8}100%{opacity:0;transform:rotate(-18deg) scale(1.35)}}
+@media(max-width:650px){.starlight-hall .platter{left:28.5%;top:49.4%;width:57%;transform:scaleY(.265)}.starlight-hall .music-sparks{letter-spacing:3px}}
+.starlight-hall .voice-controls{display:none!important}#voiceKeepsake .voice-controls{position:relative;inset:auto;width:100%;display:flex!important;margin:10px 0 0;padding:7px 0 0;border-top:1px solid #c5b78f;background:none;box-shadow:none;justify-content:center}#voiceKeepsake .voice-controls #voicePlay,#voiceKeepsake .voice-controls #voiceDownload{display:none}#voiceKeepsake .voice-controls #voiceClock{display:block;font-size:9px}#voiceKeepsake .voice-controls input{height:3px}#voiceKeepsake .voice-controls button{font-size:9px}#voiceKeepsake>div:not(.voice-controls){gap:5px}#voiceKeepsake [data-keepsake=delete]{color:#a37b69}#voiceKeepsake [data-keepsake=delete][data-confirm=yes]{background:#e5c4ad}
+/* Center the full composition, including its wider archive plaque. */
+#voiceKeepsake{width:225px;padding-left:21px;padding-right:21px}
+#voiceKeepsake>small{margin-top:14px;letter-spacing:.6px;font-size:7px}
+#voiceKeepsake:before{top:5px;bottom:auto;height:16px}
+@media(min-width:1251px){#dialog[data-world=voice]:has(#voiceKeepsake:not([hidden])){translate:-95px 0}}
+@media(min-width:651px) and (max-width:1250px){#voiceKeepsake{width:225px;left:61%;top:83%}}
+@media(max-width:650px){#voiceKeepsake{width:220px;max-width:80vw;left:-10%;top:101%}#voiceKeepsake>small{margin-top:14px}}
+/* Keep the archive plaque above the cabinet feet. */
+#voiceKeepsake{padding-top:18px;padding-bottom:12px}
+#voiceKeepsake>small{margin-top:9px;font-size:7px;line-height:1.4}
+#voiceKeepsake h4{margin:9px 0 12px;font-size:18px;line-height:1.4}
+#voiceKeepsake p{margin:0 0 5px;line-height:1.5}
+#voiceKeepsake time{line-height:1.7}
+#voiceKeepsake>div:not(.voice-controls){margin-top:10px;padding-top:8px;padding-bottom:0}
+#voiceKeepsake .voice-controls{margin-top:7px;padding-top:7px;gap:3px}
+#voiceKeepsake .voice-controls #voiceClock{line-height:1.2;margin:0}
+#voiceKeepsake .voice-controls input[type=range]{height:3px!important;min-height:0!important;padding:0!important;margin:4px 0!important;border-radius:3px;background:linear-gradient(#b39860,#e4cca0)!important}
+@media(min-width:1251px){#voiceKeepsake{top:15%}}
+@media(max-width:650px){#voiceKeepsake{padding-top:18px;padding-bottom:12px}}
+
+.starlight-hall #voiceStudio.record-label{
+ padding:29px 19px 15px;
+ border:4px double #b6a16f;
+ border-radius:14px 25px 14px 4px / 8px 18px 12px 4px;
+ background:linear-gradient(90deg,#9bb4b9 0 5px,transparent 5px calc(100% - 5px),#99b0b7 calc(100% - 5px)),radial-gradient(ellipse at 25% 0,#fdf9e9,transparent 75%),repeating-linear-gradient(5deg,#9a84590b 0 1px,transparent 1px 3px),#eee3c9;
+ box-shadow:-5px 0 0 #a7885b,0 2px 0 #ddca9d,3px 8px 12px #3b594633;
+}
+.starlight-hall #voiceStudio::before{
+ content:'❧ ♫ ❧';inset:5px 12px auto;height:18px;
+ border:0;border-bottom:1px solid #c2ad7955;border-radius:0;
+ text-align:center;font:16px/18px Georgia,serif;color:#b29860;
+}
+.starlight-hall #voiceStudio::after{display:none}
+.starlight-hall #voiceStudio .label-kicker{
+ display:block;margin:0;text-align:center;color:#ac925c;font:8px/1.5 Georgia,KaiTi,serif;letter-spacing:.9px;
+}
+.starlight-hall #voiceStudio h3{
+ margin:6px 0 9px;text-align:center;color:#5f7e88;font:18px/1.5 KaiTi,serif;
+}
+.starlight-hall #voiceStudio .label-signature{display:flex;align-items:center;gap:8px;white-space:nowrap;color:#827352}
+.starlight-hall #voiceStudio .label-signature input{min-width:0}
+.starlight-hall #voiceStudio .label-tools{
+ justify-content:space-between;gap:6px;margin-top:7px;padding-top:8px;border-top:3px double #bda46c66;
+}
+.starlight-hall #voiceStudio .label-tools button,
+.starlight-hall #voiceStudio .label-tools #voiceSave{
+ width:25px;height:24px;padding:0;border:1px solid #b59c65;border-radius:5px;
+ background:linear-gradient(125deg,#f5e6bc,#d8c18e 50%,#efe0b9);
+ box-shadow:inset 0 1px 0 #fff3d0,0 2px 0 #9f8c5d55;color:#5a7173;font:16px/1 Georgia,serif;
+}
+#dialog[data-world=voice] .arc-pagination button {
+  position: relative;
+  padding: 0;
+  font-size: 0;
+}
+#dialog[data-world=voice] .arc-pagination button::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 5px;
+  height: 5px;
+  border: solid currentColor;
+  border-width: 0 1.5px 1.5px 0;
+  transform: translate(-60%, -50%) rotate(-45deg);
+}
+#dialog[data-world=voice] .arc-pagination #voicePrev::after {
+  transform: translate(-40%, -50%) rotate(135deg);
+}
+#dialog[data-world=voice] .voice-slots {
+  left: 8.5%;
+  right: 8.5%;
+  top: 23%;
+  bottom: 10%;
+  gap: 6% 3%;
+}
+#dialog[data-world=voice] .voice-slot {
+  display: grid;
+  place-items: center;
+}
+#dialog[data-world=voice] .slot-front {
+  display: grid;
+  place-items: center;
+}
+#dialog[data-world=voice] .empty-record {
+  height: auto;
+  place-items: center;
+  line-height: 1.2;
+}
+
+#dialog[data-world=voice] .voice-slots {
+  left: 8.5%;
+  right: 8.5%;
+  top: 23%;
+  bottom: 10%;
+  gap: 6% 3%;
+}
+#dialog[data-world=voice] .voice-slot {
+  display: grid;
+  place-items: center;
+}
+#dialog[data-world=voice] .slot-front {
+  display: grid;
+  place-items: center;
+}
+#dialog[data-world=voice] .empty-record {
+  height: auto;
+  place-items: center;
+  line-height: 1.2;
+}
+#dialog[data-world=voice] .voice-slots {
+  left: 10.5%;
+  right: 12%;
+  top: 23.5%;
+  bottom: 16%;
+  gap: 5% 2%;
+}
+#dialog[data-world=voice] .slot-front .magic-disc {
+  margin: 0;
+}
+
+#dialog[data-world=voice] .slot-front .magic-disc {
+  display: grid;
+  width: min(67%, 90px);
+  max-width: none;
+  height: auto;
+  aspect-ratio: 1;
+  justify-self: center;
+}
+#dialog[data-world=voice] .slot-front {
+  width: 100%;
+  height: 100%;
+  grid-template-columns: minmax(0, 1fr);
+}
+#dialog[data-world=voice] .voice-slot:nth-child(3n+1) { translate: -6.5% var(--slot-y, 0%); }
+#dialog[data-world=voice] .voice-slot:nth-child(3n+2) { translate: 5% var(--slot-y, 0%); }
+#dialog[data-world=voice] .voice-slot:nth-child(3n) { translate: 15% var(--slot-y, 0%); }
+#dialog[data-world=voice] .voice-slot:nth-child(n+4) { --slot-y: 10%; }

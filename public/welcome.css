@@ -1,0 +1,47 @@
+#cottageInterior .welcome-room{position:relative;justify-content:flex-end;align-items:center;min-height:100dvh;padding:70px 15px 18px}
+.welcome-room #leaveCottage{position:absolute;top:70px;left:clamp(12px,4vw,60px);z-index:4}
+.welcome-family{position:relative;width:min(83vw,830px);margin-top:50px;text-align:center;isolation:isolate}
+.welcome-family>img{display:block;width:100%;height:auto;max-height:45dvh;object-fit:contain;filter:drop-shadow(0 6px 4px #674f362c)}
+.welcome-family>p{margin:3px 0 10px;font-family:"KaiTi","STKaiti",serif;font-size:1.15rem;color:#624a32;text-shadow:0 1px 5px #fff6dc}
+.welcome-wish-note{display:inline-grid;gap:3px;padding:12px 28px 13px;background:repeating-linear-gradient(0deg,#fff5dceF 0 4px,#fcf0d3ef 4px 5px);border:1px solid #c9ad7d;border-radius:6px;box-shadow:0 5px 12px #6e4b2726;rotate:-2deg;color:#5a664b;margin-bottom:13px;position:relative}
+.welcome-wish-note::before{content:"";width:38px;height:12px;background:#c4d5bcbf;position:absolute;left:calc(50% - 19px);top:-7px;rotate:4deg}
+.welcome-wish-note span{font-size:.68rem;letter-spacing:.16em}
+.welcome-wish-note b{font-family:"KaiTi","STKaiti",serif;font-size:1.22rem;font-weight:500}
+.welcome-wish-note small{font-size:.67rem}
+.welcome-wish-note:hover{rotate:0deg;translate:0 -2px}
+#cottageInterior .welcome-room .cottage-note{align-self:center;width:min(100%,520px);padding:7px 12px}
+.welcome-room .room-index{border:0;padding:0;margin:0}
+.welcome-room .room-index summary{text-align:center;font-size:.75rem}
+@media(max-width:650px){#cottageInterior .welcome-room{padding:74px 12px 15px;justify-content:center;gap:10px}.welcome-room #leaveCottage{top:50px}.welcome-family{width:100%;margin-top:55px}.welcome-family>img{max-height:38dvh}.welcome-family>p{font-size:.95rem}.welcome-wish-note{padding:10px 17px}.welcome-wish-note b{font-size:1.12rem}}
+
+#cottageInterior .welcome-room{box-sizing:border-box;height:100dvh;min-height:0;gap:14px;padding-bottom:max(24px,env(safe-area-inset-bottom))}
+.welcome-family{margin-top:20px;width:min(90vw,1100px)}
+.welcome-family>img{max-height:42dvh;min-height:0}
+#cottageInterior .cottage-journal-trigger{display:grid;gap:5px;align-self:center;width:min(470px,90vw);padding:13px 25px;background:#fff3dbe8;border:1px solid #b79968;border-radius:9px;box-shadow:0 4px 15px #76542f25;color:#654c30}
+.cottage-journal-trigger span{font:9px Georgia,serif;letter-spacing:.2em;color:#947347}
+.cottage-journal-trigger b{font:21px KaiTi,STKaiti,serif;font-weight:500}
+.cottage-journal-trigger small{font-size:11px;color:#92734f}
+#dialog:has(.cottage-journal){width:min(700px,calc(100vw - 32px));box-sizing:border-box;background:linear-gradient(115deg,#f6e8c9,#fffae9 52%,#efe0bf);border:1px solid #bda173;box-shadow:0 20px 70px #4d321d40;color:#624b31;max-height:86dvh}
+.cottage-journal{padding:5px 9px 8px}.cottage-journal>.eyebrow{font-size:10px;letter-spacing:.2em;color:#a07d49}
+.cottage-journal h2{font-family:KaiTi,STKaiti,serif;font-weight:500;font-size:30px;margin:12px 0 5px;color:#654a2b}
+.journal-intro{font-size:13px;color:#93734c;margin:0 0 18px}
+.cottage-journal .cottage-counts{display:flex;flex-wrap:wrap;gap:0;border-top:1px dashed #bea779;border-bottom:1px dashed #bea779;padding:12px 0;margin:12px 0 18px}
+.cottage-journal .cottage-counts>span{flex:1;min-width:60px;background:none;border:0;border-radius:0;text-align:center;padding:3px 7px;color:#725638}
+.cottage-journal .cottage-counts b{display:block;font:18px Georgia,serif}.cottage-journal .cottage-counts small{font-size:11px;color:#9c805b}
+.journal-shelf{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}
+#dialog .journal-shelf button{display:grid;gap:5px;text-align:left;padding:13px 15px;background:#fcf2dcb3;border:1px solid #d7bf93;border-radius:6px;box-shadow:none;color:#705232}
+.journal-shelf b{font-family:KaiTi,STKaiti,serif;font-size:18px;font-weight:500}.journal-shelf small{font-size:11px;color:#a0835b}
+.journal-extras{display:flex;gap:9px;margin-top:16px}#dialog .journal-extras button{background:none;border:0;border-bottom:1px solid #bba278;border-radius:0;padding:5px;color:#947044;box-shadow:none;font-size:12px}
+@media(max-width:650px){#cottageInterior .welcome-room{justify-content:flex-end;padding-top:85px;gap:12px}.welcome-family{width:100%;margin-top:0}.welcome-family>img{max-height:34dvh}.cottage-journal{padding:3px}.journal-shelf{gap:7px}#dialog .journal-shelf button{padding:11px 9px}.journal-shelf b{font-size:16px}.journal-shelf small{font-size:10px}}
+#panel:has(#photoSet) #photoSet { margin-top: 18px; }
+#cottageInterior .welcome-family > img {
+  position: relative;
+  top: clamp(18px,3.6dvh,32px);
+}
+#cottageInterior .welcome-family > p {
+  position: relative;
+  top: clamp(18px,3.6dvh,32px);
+  margin-bottom: clamp(24px,4dvh,36px);
+}
+
+#cottageInterior .welcome-family > p {margin-bottom: 10px;}
